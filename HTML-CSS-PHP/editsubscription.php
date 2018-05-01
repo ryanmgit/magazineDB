@@ -7,19 +7,19 @@ $sql = $pdo->prepare($query);
 $sql->execute(array(":subscriptionid" => $_GET['subscriptionid']));
 
 $row = $sql->fetch(PDO::FETCH_ASSOC); //read the next row od the query result into $row
-$aen = $row['Subscriptiondate'];
-$ean = $row['Subscriptionperiod'];
-$kan = $row['Subscriberid'];
-$rid = $row['Magazinenid'];
+$aen = $row['subscriptiondate'];
+$ean = $row['subscriptionperiod'];
+$kan = $row['subscriberid'];
+$rid = $row['magazinenid'];
 
 if(isset($_POST['updatebutton'])){
   //execute the following sql statement
-  $query="update subscription set subscriptiondate=:subscriptiondate, Subscriptionperiod=:Subscriptionperiod, where subscriptionid=:subscriptionid";
+  $query="update subscription set subscriptiondate=:subscriptiondate, subscriptionperiod=:subscriptionperiod, where subscriptionid=:subscriptionid";
   $sql=$pdo->prepare($query);
   $sql->execute(
   array(":subscriptiondate" => $_POST['subscriptiondate'],
-        ":Subscriptionperiod" => $_POST['Subscriptionperiod'],
-        ":Magazinenid" => $_POST['Magazinenid'],
+        ":subscriptionperiod" => $_POST['subscriptionperiod'],
+        ":magazinenid" => $_POST['magazinenid'],
         ":subscriptionid" => $_GET['subscriptionid'])
                 );
       // end of the execution of the above sql statement
@@ -45,13 +45,13 @@ if(isset($_POST['updatebutton'])){
 <p>
   <form method="post">
 <p>Magazine id:
-  <input type="text" name="Magazinenid" value="<?= $kan ?>">
+  <input type="text" name="magazinenid" value="<?= $kan ?>">
 </p>
 <p>Subscription date:
   <input type="text" name="subscriptiondate" value="<?= $aen ?>">
 </p>
 <p>Subscription period:
-  <input type="text" name="Subscriptionperiod" value="<?= $ean ?>">
+  <input type="text" name="subscriptionperiod" value="<?= $ean ?>">
 </p>
 <p>
   <input type="submit" name="updatebutton" value="update">
