@@ -10,14 +10,14 @@ $pil = $row['City'];
 $jiid = $row['State'];
 
 if(isset($_POST['updatebutton'])){
-  $query="UPDATE magazine SET Magazinename=:Magazinename, type=:type, City=:City, State=:State WHERE Magazineid=:Magazineid";
+  $query="UPDATE magazine SET magazinename=:magazinename, type=:type, city=:city, state=:state WHERE magazineid=:magazineid";
   $sql=$pdo->prepare($query);
   $sql->execute(
-  array(":Magazinename" => $_POST['Magazinename'],
+  array(":magazinename" => $_POST['magazinename'],
         ":type" => $_POST['type'],
-        ":City" => $_POST['City'],
-        ":State" => $_POST['State'],
-        ":Magazineid" => $_GET['Magazineid'])
+        ":city" => $_POST['city'],
+        ":state" => $_POST['state'],
+        ":magazineid" => $_GET['magazineid'])
                 );
   header('Location: displaymagazine.php');
 };
