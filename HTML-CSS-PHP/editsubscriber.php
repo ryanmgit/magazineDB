@@ -15,15 +15,15 @@ $u = $row['State'];
 
 if(isset($_POST['updatebutton'])){
   //execute the following sql statement
-  $query="update subscriber set subscribersfname=:subscribersfname, subscriberslname=:subscriberslname, email=:email, city=:city, state=:state where subscriberid=:subscriberid";
+  $query="UPDATE subscriber SET subscribersfname=:subscribersfname, subscriberslname=:subscriberslname, email=:email, city=:city, state=:state WHERE subscriberid=:subscriberid";
   $sql=$pdo->prepare($query);
   $sql->execute(
-  array(":subscribersfname" => $_POST['subscribersfname'],
-        ":subscriberslname" => $_POST['subscriberslname'],
-        ":email" => $_POST['email'],
-        ":city" => $_POST['city'],
-        ":state" => $_POST['state'],
-        ":subscriberid" => $_GET['subscriberid'])
+  	array(":subscribersfname" => $_POST['subscribersfname'],
+        	":subscriberslname" => $_POST['subscriberslname'],
+        	":email" => $_POST['email'],
+        	":city" => $_POST['city'],
+        	":state" => $_POST['state'],
+        	":subscriberid" => $_GET['subscriberid'])
                 );
       // end of the execution of the above sql statement
   header('Location: displaysubscriber.php'); //go back to display business
