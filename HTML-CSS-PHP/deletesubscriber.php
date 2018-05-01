@@ -11,13 +11,13 @@ $gid = $row['Email'];
 $did = $row['City'];
 $mid = $row['State'];
 if(isset($_POST['yesbutton'])){
-  $query="DELETE FROM subscription WHERE subscriberid=:subscriberid";
-  $sql=$pdo->prepare($query);
-  $sql->execute(array(":subscriberid" => $_GET['subscriberid']));
-  $query="DELETE FROM subscriber WHERE subscriberid=:subscriberid";
-  $sql=$pdo->prepare($query);
-  $sql->execute(array(":subscriberid" => $_GET['subscriberid']));
-  header('Location: displaysubscriber.php');//go back to page displaybusiness
+	$query="DELETE FROM subscription WHERE subscriberid=:subscriberid";
+	$sql=$pdo->prepare($query);
+	$sql->execute(array(":subscriberid" => $_GET['subscriberid']));
+	$query="DELETE FROM subscriber WHERE subscriberid=:subscriberid";
+	$sql=$pdo->prepare($query);
+	$sql->execute(array(":subscriberid" => $_GET['subscriberid']));
+	header('Location: displaysubscriber.php');//go back to page displaybusiness
 };
 ?>
 
