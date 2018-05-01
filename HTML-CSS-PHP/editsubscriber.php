@@ -26,7 +26,7 @@ if(isset($_POST['updatebutton'])){
         	":subscriberid" => $_GET['subscriberid'])
                 );
       // end of the execution of the above sql statement
-  header('Location: displaysubscriber.php'); //go back to display business
+	header('Location: displaysubscriber.php'); //go back to display business
 };
 ?>
 
