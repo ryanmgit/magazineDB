@@ -2,9 +2,9 @@
 <?php
 require_once "dbconnection.php";
 //execute the follpwing quary
-$query="SELECT * FROM review where Subscriberid = :Subscriberid";
+$query="SELECT * FROM review where subscriberid = :subscriberid";
 $sql=$pdo->prepare($query);
-$sql->execute(array(":Subscriberid" => $_GET['Subscriberid']));
+$sql->execute(array(":subscriberid" => $_GET['subscriberid']));
 
 
 require_once "dbconnection.php";
@@ -12,13 +12,13 @@ $query="SELECT * FROM magazine where magazineid = :magazineid";
 $sql = $pdo->prepare($query);
 $sql->execute(array(":magazineid" => $_GET['magazineid']));
 $row = $sql->fetch(PDO::FETCH_ASSOC);
-$in = $row['Magazinename'];
-$on = $row['Type'];
-$of = $row['City'];
-$fo = $row['State'];
+$in = $row['magazinename'];
+$on = $row['type'];
+$of = $row['city'];
+$fo = $row['state'];
 
 if(isset($_POST['submitbutton'])){
-  $query="SELECT subscriberid FROM consumer where Email = :Email";
+  $query="SELECT subscriberid FROM consumer where email = :email";
   $sql=$pdo->prepare($query);
   $sql->execute(array(":email" => $_POST['email']));
 //after the add button, execute the insert into sql statement
