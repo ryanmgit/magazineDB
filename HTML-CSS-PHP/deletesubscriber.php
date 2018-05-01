@@ -11,7 +11,7 @@ $gid = $row['Email'];
 $did = $row['City'];
 $mid = $row['State'];
 if(isset($_POST['yesbutton'])){
-  $query="delete from subscriber where subscriberid=:subscriberid";
+  $query="DELETE FROM subscriber WHERE subscriberid=:subscriberid";
   $sql=$pdo->prepare($query);
   $sql->execute(
   array(
