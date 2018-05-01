@@ -12,6 +12,9 @@ $bid = $row['City'];
 $fid = $row['State'];
 
 if(isset($_POST['yesbutton'])){
+	$query="DELETE FROM subscription WHERE magazineid=:magazineid";
+	$sql=$pdo->prepare($query);
+	$sql->execute(array(":magazineid" => $_GET['magazineid']));
 	$query="DELETE FROM magazine WHERE magazineid=:magazineid";
 	$sql=$pdo->prepare($query);
 	$sql->execute(array(":magazineid" => $_GET['magazineid']));
