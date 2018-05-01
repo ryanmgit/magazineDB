@@ -19,7 +19,7 @@ if(isset($_POST['updatebutton'])){
   $sql->execute(
   array(":subscriptiondate" => $_POST['subscriptiondate'],
         ":subscriptionperiod" => $_POST['subscriptionperiod'],
-        ":magazinenid" => $_POST['magazinenid'],
+        ":magazinenid" => $_POST['magazineid'],
         ":subscriptionid" => $_GET['subscriptionid'])
                 );
       // end of the execution of the above sql statement
@@ -45,7 +45,7 @@ if(isset($_POST['updatebutton'])){
 <p>
   <form method="post">
 <p>Magazine id:
-  <input type="text" name="magazinenid" value="<?= $kan ?>">
+  <input type="text" name="magazineid" value="<?= $kan ?>">
 </p>
 <p>Subscription date:
   <input type="text" name="subscriptiondate" value="<?= $aen ?>">
