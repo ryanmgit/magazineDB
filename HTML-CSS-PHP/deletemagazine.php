@@ -1,4 +1,5 @@
 <?php
+error_reporting(E_ALL);
 require_once "dbconnection.php";
 $query="SELECT * FROM magazine where magazineid = :magazineid";
 $sql = $pdo->prepare($query);
