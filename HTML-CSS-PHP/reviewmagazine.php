@@ -36,7 +36,7 @@ if(isset($_POST['submitbutton'])){
         ":Magazineid" => $fid)
                );
 //they are defenitions for :businessname,:city,:state
-  header('Location: displaymagazines.php');//go back
+  header('Location: displaymagazine.php');//go back
 };
 
 
@@ -97,7 +97,7 @@ echo "</table>";
 <p>
 </p>
 <div class="button">
-  <input type="button" class="cancelbutton" value="Cancel" onclick="location.href='index.html';">
+  <input type="button" class="cancelbutton" value="Cancel" onclick="location.href='displaymagazine.php';">
 </div>
 
 </div>
