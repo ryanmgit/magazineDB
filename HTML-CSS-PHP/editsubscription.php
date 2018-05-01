@@ -10,7 +10,7 @@ $row = $sql->fetch(PDO::FETCH_ASSOC); //read the next row od the query result in
 $aen = $row['subscriptiondate'];
 $ean = $row['subscriptionperiod'];
 $kan = $row['subscriberid'];
-$rid = $row['magazinenid'];
+$rid = $row['magazineid'];
 
 if(isset($_POST['updatebutton'])){
   //execute the following sql statement
