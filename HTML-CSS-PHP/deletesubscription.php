@@ -11,7 +11,7 @@ $kid = $row['Subscriptiondate'];
 $lid = $row['Subscriptionperiod'];
 
 if(isset($_POST['yesbutton'])){
-  $query="delete from subscription where Subscriptionid=:Subscriptionid";
+  $query="delete from subscription where subscriptionid=:subscriptionid";
   $sql=$pdo->prepare($query);
   $sql->execute(
   array(
