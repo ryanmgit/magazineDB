@@ -10,7 +10,7 @@ $pil = $row['City'];
 $jiid = $row['State'];
 
 if(isset($_POST['updatebutton'])){
-  $query="update magazine set Magazinename=:Magazinename, type=:type, City=:City, State=:State where Magazineid=:Magazineid";
+  $query="UPDATE magazine SET Magazinename=:Magazinename, type=:type, City=:City, State=:State WHERE Magazineid=:Magazineid";
   $sql=$pdo->prepare($query);
   $sql->execute(
   array(":Magazinename" => $_POST['Magazinename'],
