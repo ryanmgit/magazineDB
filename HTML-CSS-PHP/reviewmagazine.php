@@ -20,9 +20,9 @@ echo "<tr><th>Review Date</th><th>Stars</th></tr>";
 echo "</table>";
 
 require_once "dbconnection.php";
-$query="SELECT * FROM magazine where Magazineid = :Magazineid";
+$query="SELECT * FROM magazine where magazineid = :magazineid";
 $sql = $pdo->prepare($query);
-$sql->execute(array(":Magazineid" => $_GET['Magazineid']));
+$sql->execute(array(":magazineid" => $_GET['magazineid']));
 $row = $sql->fetch(PDO::FETCH_ASSOC);
 $in = $row['Magazinename'];
 $on = $row['Type'];
