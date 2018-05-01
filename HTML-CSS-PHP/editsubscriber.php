@@ -15,15 +15,7 @@ $u = $row['State'];
 
 if(isset($_POST['updatebutton'])){
 	//execute the following sql statement
-	$query="UPDATE subscriber SET subscribersfname=:subscribersfname WHERE subscriberid=:subscriberid";
-	$sql=$pdo->prepare($query);
-	$query="UPDATE subscriber SET subscriberslname=:subscriberslname WHERE subscriberid=:subscriberid";
-	$sql=$pdo->prepare($query);
-	$query="UPDATE subscriber SET email=:email WHERE subscriberid=:subscriberid";
-	$sql=$pdo->prepare($query);
-	$query="UPDATE subscriber SET city=:city WHERE subscriberid=:subscriberid";
-	$sql=$pdo->prepare($query);
-	$query="UPDATE subscriber SET state=:state WHERE subscriberid=:subscriberid";
+	$query="UPDATE subscriber SET subscribersfname=:subscribersfname, subscriberslname=:subscriberslname, email=:email, city=:city, state=:state WHERE subscriberid=:subscriberid";
 	$sql=$pdo->prepare($query);
 	$sql->execute(
   	array(":subscribersfname" => $_POST['subscribersfname'],
