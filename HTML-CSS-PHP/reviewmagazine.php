@@ -36,7 +36,7 @@ if(isset($_POST['submitbutton'])){
         ":Magazineid" => $fid)
                );
 //they are defenitions for :businessname,:city,:state
-  header('Location: index.html');//go to index
+  header('Location: displaymagazines.php');//go back
 };
 
 
