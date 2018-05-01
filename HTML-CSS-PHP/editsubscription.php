@@ -19,7 +19,7 @@ if(isset($_POST['updatebutton'])){
   $sql->execute(
   array(":subscriptiondate" => $_POST['subscriptiondate'],
         ":subscriptionperiod" => $_POST['subscriptionperiod'],
-        ":magazinenid" => $_POST['magazineid'],
+        ":magazineid" => $_POST['magazineid'],
         ":subscriptionid" => $_GET['subscriptionid'])
                 );
       // end of the execution of the above sql statement
