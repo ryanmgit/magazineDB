@@ -24,7 +24,7 @@ if(isset($_POST['updatebutton'])){
         	":city" => $_POST['city'],
         	":state" => $_POST['state'],
         	":subscriberid" => $_GET['subscriberid'])
-                );
+	);
       // end of the execution of the above sql statement
 	header('Location: displaysubscriber.php'); //go back to display business
 };
