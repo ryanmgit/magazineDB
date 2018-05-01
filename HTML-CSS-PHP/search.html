@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search</title>
+<link rel="stylesheet" type="text/css" href="magazinestyle.css">
+</head>
+<body>
+<div class="background">
+<div class="fullform">
+	<div class="welcometext"> 
+		Search Criteria
+	</div>
+    <p></p>
+	<form action="search.php" method="POST" name="search">
+
+		<div class="fname">
+			First Name: 
+		<input type="text" size="32" name="fnameinput" id="fname" value='Any'></input>
+		</div>
+        <p></p>
+        <div class="lname">
+			Last Name: 
+		<input type="text" size="32" name="lnameinput" id="lname" value='Any'></input>
+		</div>
+        <p></p>
+        <div class="Email">
+			Email: 
+		<input type="text" size="32" name="emailinput" id="email" value='Any'></input>
+		</div>
+        <p></p>
+        <div class="City">
+			City: 
+		<input type="text" size="32" name="cityinput" id="city" value='Any'></input>
+		</div>
+        <p></p>
+        <div class="State">
+			State: 
+		<input type="text" size="32" name="stateinput" id="state" value='Any'></input>
+		</div>
+        <p></p>
+        <div class="Magazine">
+			Magazine: 
+		<input type="text" size="32" name="magazineinput" id="magazine" value='Any'></input>
+		</div>
+        <div class="search">
+			<input type="submit" class="search" value="Search">
+			<input type="reset" class="search">
+            <input type="button" class="search" value="Cancel" onclick="location.href='index.html';">
+		</div>
+</form>
+</div>
+</body>
+</html>

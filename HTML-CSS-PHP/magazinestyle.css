@@ -1,0 +1,143 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+	height: 100%;
+}
+div.background {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	background-image: url(images/magazines.jpg);
+	background-size:     cover;                      
+    background-repeat:   no-repeat;
+    background-position: center center;
+	overflow: auto;   
+	
+}
+div.fullform{
+	position: relative;
+	background-color: rgba(179, 182, 188, 0.9);
+    width: 56%;
+	padding: 4% 6% 7% 6%;
+	border-radius: 50px;
+	display: inline-block;
+	font-size: 2vw;
+	margin: 15% 16% 5% 16%;
+    align-content: center;
+	
+
+}
+div.welcometext{
+	text-align: center;
+	font-size: 3vw;
+}
+div.thanks{
+	font-size: 10vw;
+	text-align: center;
+}
+div.thanksform{
+	position: relative;
+	background-color: rgba(179, 182, 188, 0.9);
+  	top: 30%;
+	left: 20%;
+    width: 60%;
+	padding: 20px;
+	border-radius: 50px;	
+}
+div.username{
+	position: relative;
+	margin: 0% 0% 0% 0%;
+	height:5%;
+	
+}
+div.button{
+	position: relative;
+	margin:0% 10% 0% 10%; 
+    display: flex;
+    justify-content: center;
+}
+div.search{
+    width: 80%;
+    padding: 8% 10% 0% 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+}
+div.php{
+    width: 100%;
+}
+div.allmeaning{
+    width: 40%;
+    text-align: center;
+    
+}
+table, th, td.php{
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    table-layout:fixed;
+    font-size: 1vw;
+    border: 1px solid black;
+}
+input.cancel{
+	width: 20%;
+	height: 15%;
+	font-size: 1vw;
+	border-radius: 8px;
+	cursor: pointer;	
+}
+input[type=text] {
+	font-size: 1.8vw;
+	text-align: center;
+	padding:0.2%%;
+	float: right;
+	vertical-align: text-bottom;
+    margin:0% 0% 0% 0%;
+}
+input[type=submit] {
+    background-color: rgb(249, 250, 252);
+	-webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    border-radius: 6px;
+	cursor: pointer;
+}
+input[type=submit]:hover {
+	background-color: rgba(10, 95, 255, 0.5);
+}
+
+input[type=reset] {
+    background-color: rgb(249, 250, 252);
+	-webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+input[type=reset]:hover {
+	background-color: rgba(119, 121, 124, 0.3);
+}
+input.search{
+    background-color: rgb(249, 250, 252);
+	-webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    width: 20%;
+	height: 100%;
+	font-size: 100%;
+	border-radius: 6px;
+	cursor: pointer;
+    margin: 0% 5% 0% 5%;
+}
+input.search:hover {
+	background-color: rgba(119, 121, 124, 0.3);
+}
+input.indexbuttons{
+    background-color: rgb(249, 250, 252);
+	-webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    width: 76%;
+	height: 15%;
+	font-size: 150%;
+	border-radius: 8px;
+	cursor: pointer;
+}
+input.indexbuttons:hover {
+	background-color: rgba(119, 121, 124, 0.3);
+}
