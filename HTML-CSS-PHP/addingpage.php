@@ -82,7 +82,7 @@ require_once "dbconnection.php";//connect to the database
 //after clicking the add button, the user input through the html form are saved as $_POST['accountname'],$_POST['email'],$_POST['addbutton']
 if(isset($_POST['addsubscriber'])){
   //the following 6 lines of code define and execute an sql statment
-  $query="insert into magazine (subscriberfname, subscriberlname, subscriberid, Email, City, State) values (:subscriberfname, :subscriberlname, :Email, :City, :State)";//:accountname,:email are placeholders for user input
+  $query="insert into magazine (subscriberfname, subscriberlname, Email, City, State) values (:subscriberfname, :subscriberlname, :Email, :City, :State)";//:accountname,:email are placeholders for user input
   $sql=$pdo->prepare($query);
   $sql->execute(
   array(":subscriberfname" => $_POST['subscriberfname'],//the placeholders are defined using array()
