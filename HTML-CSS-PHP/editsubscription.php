@@ -48,9 +48,9 @@ if(isset($_POST['updatebutton'])){
 </p>
 <p>Subscription period:
 	<select>
-		<option value="'Daily'" <?php if ($subscriptionperiod == "Daily") echo "selected='selected'";?> >Daily</option>
-		<option value="'Weekly'" <?php if ($subscriptionperiod == "Weekly") echo "selected='selected'";?> >Weekly</option>
-		<option value="'Monthly'" <?php if ($subscriptionperiod == "Monthly") echo "selected='selected'";?> >Monthly</option>
+		<option value="Daily" <?php if ($subscriptionperiod == "Daily") echo "selected='selected'";?> >Daily</option>
+		<option value="Weekly" <?php if ($subscriptionperiod == "Weekly") echo "selected='selected'";?> >Weekly</option>
+		<option value="Monthly" <?php if ($subscriptionperiod == "Monthly") echo "selected='selected'";?> >Monthly</option>
 	</select>
 </p>
 <p>
