@@ -145,4 +145,6 @@ select{
 	float: right;
 	width: 40%;
 	font-size: 1.8vw;
+	height: 80%;
+	text-align: center;
 }
