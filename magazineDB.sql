@@ -1,4 +1,4 @@
--- phpMyAdmin SQL empty startup file
+-- phpMyAdmin SQL empty startup file THIS WILL DELETE EVERYTHING IN magazinedb
 
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
