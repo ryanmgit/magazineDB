@@ -58,7 +58,7 @@
     }
   ?>
 	  <p>test1</p>
-<?
+<?php
 require_once "dbconnection.php";
 //execute the follpwing query
 $query="select subscriptionid, magazinename, subscribersfname, subscriberslname, subscriptiondate, subscriptionperiod, subscriber.city, magazine.city, subscriber.state, magazine.state from subscription left join subscriber on subscription.subscriberid=subscriber.subscriberid left join magazine on subscription.magazineid=magazine.magazineid where subscribersfname' . $fname . ' and subscriberslname' . $lname . ' and email' . $email . ' and subscriber.city' . $city . ' and magazine.city' . $city . ' and subscriber.state' . $state . ' and magazine.state' . $state . ' and magazinename' . $magazine . ' group by subscriptionid;'";
