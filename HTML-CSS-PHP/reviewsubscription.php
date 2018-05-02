@@ -9,6 +9,7 @@ $sql->execute(array(":subscriptionid" => $_GET['subscriptionid']));
 $row = $sql->fetch(PDO::FETCH_ASSOC);
 $magazineid = $row['Magazineid'];
 $subscriberid = $row['Subscriberid'];
+$subscriptionid = $row['Subscriptionid'];
 
 $query="SELECT magazinename FROM magazine where magazineid = :magazineid";
 $sql = $pdo->prepare($query);
@@ -75,7 +76,8 @@ if(isset($_POST['submitbutton'])){
 	 <input type="radio" id="5star" name="stars" value="5" checked="checked">
     	 <label for="5star">5</label>
   <p>
-    <input type="submit" name="submitbutton" value="submit">
+	  <input type="hidden" name="subscriptionid" value="<?= $subscriptionid ?></input>
+    <input type="submit" name="submitbutton" value="submit"></input>
   </p>
     </form>
   </p>
