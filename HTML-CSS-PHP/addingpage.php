@@ -33,7 +33,7 @@ if(isset($_POST['addmagazine'])){
 
 if(isset($_POST['addsubscription'])){
   //the following 6 lines of code define and execute an sql statment
-  $query="insert into subscription (magazineid, subscriberid, subscriptiondate, subscriptionperiod) values (:subscriptiondate, :subscriptionperiod)";//:accountname,:email are placeholders for user input
+  $query="insert into subscription (magazineid, subscriberid, subscriptiondate, subscriptionperiod) values (:magazineid, :subscriberid,:subscriptiondate, :subscriptionperiod)";//:accountname,:email are placeholders for user input
   $sql=$pdo->prepare($query);
   $sql->execute(
   array(":magazineid" => $_POST['magazineid'],
