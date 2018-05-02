@@ -34,8 +34,8 @@ echo "<tr><th>Magazine id</th><th>Subscriber id</th><th>Subscriptiondate</th><th
     echo ($row['Subscriptionperiod']);
     echo "</td><td>";
 //clicking on differnt links leads to corresponding editing pages
-    echo ('<a href="editsubscription.php?subscriptionid='.$row['Subscriptionid'].'">Edit</a> /');
-    echo ('<a href="deletesubscription.php?subscriptionid='.$row['Subscriptionid'].'">Delete</a> /');
+    echo ('<a href="editsubscription.php?subscriptionid='.$row['Subscriptionid'].'">Edit</a> / ');
+    echo ('<a href="deletesubscription.php?subscriptionid='.$row['Subscriptionid'].'">Delete</a> / ');
     echo ('<a href="reviewsubscription.php?subscriptionid='.$row['Subscriptionid'].'">Review</a>');
     echo "</td></tr>";
   }
