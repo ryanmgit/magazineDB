@@ -101,6 +101,7 @@ INSERT INTO `subscriber` (`Subscriberid`, `Subscribersfname`, `Subscriberslname`
 --
 
 CREATE TABLE `subscription` (
+  `Subscriptionid` int(11) 
   `Magazineid` int(11) NOT NULL DEFAULT '0',
   `Subscriberid` int(11) NOT NULL DEFAULT '0',
   `Subscriptiondate` date NOT NULL,
@@ -111,29 +112,29 @@ CREATE TABLE `subscription` (
 -- Dumping data for table `subscription`
 --
 
-INSERT INTO `subscription` (`Magazineid`, `Subscriberid`, `Subscriptiondate`, `Subscriptionperiod`) VALUES
-(8, 1, '2018-05-16', 'Daily'),
-(1, 8, '2018-05-16', 'Weekly'),
-(4, 3, '2018-05-16', 'Monthly'),
-(6, 1, '2018-05-16', 'Weekly'),
-(5, 1, '2018-05-16', 'WDaily'),
-(2, 7, '2018-05-16', 'Weekly'),
-(7, 4, '2018-05-16', 'Monthly'),
-(2, 1, '2018-05-16', 'Weekly'),
-(6, 5, '2018-05-16', 'Weekly'),
-(5, 1, '2018-05-16', 'Daily'),
-(4, 2, '2018-05-16', 'Weekly'),
-(1, 3, '2018-05-16', 'Monthly'),
-(2, 8, '2018-05-16', 'Weekly'),
-(6, 1, '2018-05-16', 'Daily'),
-(7, 6, '2018-05-16', 'Weekly'),
-(8, 3, '2018-05-16', 'Monthly'),
-(8, 4, '2018-05-16', 'Weekly'),
-(3, 7, '2018-05-16', 'Daily'),
-(1, 1, '2018-05-16', 'Weekly'),
-(4, 2, '2018-05-16', 'Daily'),
-(7, 3, '2018-05-16', 'Weekly'),
-(8, 8, '2018-05-16', 'Monthly');
+INSERT INTO `subscription` (`Subscriberid`,`Magazineid`, `Subscriberid`, `Subscriptiondate`, `Subscriptionperiod`) VALUES
+(1, 8, 1, '2018-05-16', 'Daily'),
+(2, 1, 8, '2018-05-16', 'Weekly'),
+(3, 4, 3, '2018-05-16', 'Monthly'),
+(4, 6, 1, '2018-05-16', 'Weekly'),
+(5, 5, 1, '2018-05-16', 'WDaily'),
+(6, 2, 7, '2018-05-16', 'Weekly'),
+(7, 7, 4, '2018-05-16', 'Monthly'),
+(8, 2, 1, '2018-05-16', 'Weekly'),
+(9, 6, 5, '2018-05-16', 'Weekly'),
+(10, 5, 1, '2018-05-16', 'Daily'),
+(11, 4, 2, '2018-05-16', 'Weekly'),
+(12, 1, 3, '2018-05-16', 'Monthly'),
+(13, 2, 8, '2018-05-16', 'Weekly'),
+(14, 6, 1, '2018-05-16', 'Daily'),
+(15, 7, 6, '2018-05-16', 'Weekly'),
+(16, 8, 3, '2018-05-16', 'Monthly'),
+(17, 8, 4, '2018-05-16', 'Weekly'),
+(18, 3, 7, '2018-05-16', 'Daily'),
+(19, 1, 1, '2018-05-16', 'Weekly'),
+(20, 4, 2, '2018-05-16', 'Daily'),
+(21, 7, 3, '2018-05-16', 'Weekly'),
+(22, 8, 8, '2018-05-16', 'Monthly');
 
 --
 -- Indexes for dumped tables
@@ -163,7 +164,7 @@ ALTER TABLE `subscriber`
 -- Indexes for table `subscription`
 --
 ALTER TABLE `subscription`
-  ADD PRIMARY KEY (`Magazineid`,`Subscriberid`);
+  ADD PRIMARY KEY (`Subscriptionid`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -186,6 +187,12 @@ ALTER TABLE `review`
 --
 ALTER TABLE `subscriber`
   MODIFY `Subscriberid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT for table `subscriber`
+--
+ALTER TABLE `subscription`
+  MODIFY `Subscriptionid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- Constraints for dumped tables
