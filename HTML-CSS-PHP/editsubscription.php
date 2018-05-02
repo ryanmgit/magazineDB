@@ -20,7 +20,7 @@ if(isset($_POST['updatebutton'])){
   array(":subscriptiondate" => $_POST['subscriptiondate'],
         ":subscriptionperiod" => $_POST['subscriptionperiod'],
         ":subscriptionid" => $_GET['subscriptionid'])
-                );
+  );
       // end of the execution of the above sql statement
   header('Location: displaysubscription.php'); //go back to display business
 };
