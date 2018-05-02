@@ -193,8 +193,7 @@ ALTER TABLE `subscription`
 -- Constraints for table `review`
 --
 ALTER TABLE `review`
-  ADD CONSTRAINT `fk3` FOREIGN KEY (`Magazineid`) REFERENCES `magazine` (`Magazineid`),
-  ADD CONSTRAINT `fk4` FOREIGN KEY (`Subscriberid`) REFERENCES `subscriber` (`Subscriberid`);
+  ADD CONSTRAINT `fk3` FOREIGN KEY (`Subscriptionid`) REFERENCES `subscription` (`Subscriptionid`);
 
 --
 -- Constraints for table `subscription`
