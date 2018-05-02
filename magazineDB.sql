@@ -101,7 +101,7 @@ INSERT INTO `subscriber` (`Subscriberid`, `Subscribersfname`, `Subscriberslname`
 --
 
 CREATE TABLE `subscription` (
-  `Subscriptionid` int(11) 
+  `Subscriptionid` int(11),
   `Magazineid` int(11) NOT NULL DEFAULT '0',
   `Subscriberid` int(11) NOT NULL DEFAULT '0',
   `Subscriptiondate` date NOT NULL,
