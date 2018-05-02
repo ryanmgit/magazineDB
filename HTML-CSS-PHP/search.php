@@ -59,7 +59,7 @@
   
 require_once "dbconnection.php";
 //execute the follpwing query
-$query='select subscriptionid, magazinename, subscribersfname, subscriberslname, subscriptiondate, subscriptionperiod, subscriber.city, subscriber.state from subscription left join subscriber on subscription.subscriberid=subscriber.subscriberid left join magazine on subscription.magazineid=magazine.magazineid where subscribersfname' . $fname . ' and subscriberslname' . $lname . ' and email' . $email . ' and subscriber.city' . $city . ' and subscriber.state' . $state . ' and magazinename' . $magazine . ' group by subscriptionid;';
+$query='select subscriptionid, magazinename, subscribersfname, subscriberslname, subscriptiondate, subscriptionperiod, subscriber.city, subscriber.state, email from subscription left join subscriber on subscription.subscriberid=subscriber.subscriberid left join magazine on subscription.magazineid=magazine.magazineid where subscribersfname' . $fname . ' and subscriberslname' . $lname . ' and email' . $email . ' and subscriber.city' . $city . ' and subscriber.state' . $state . ' and magazinename' . $magazine . ' and email' . $email . ' group by subscriptionid;';
 $sql=$pdo->prepare($query); 
 $sql->execute();
 	 
@@ -87,8 +87,9 @@ echo "<tr><th>Subscription id</th><th>Magazine Name</th><th>Subscriber fname</th
     echo ($row['Email']);
     echo "</td><td>";
 //clicking on different links leads to corresponding editing pages
-    echo ('<a href="editsubscription.php?subscriptionid='.$row['Subscriptionid'].'">Edit</a> /');
+    echo ('<a href="editsubscription.php?subscriptionid='.$row['Subscriptionid'].'">Edit</a> / ');
     echo ('<a href="deletesubscription.php?subscriptionid='.$row['Subscriptionid'].'">Delete</a> / ');
+    echo ('<a href="reviewsubscription.php?subscriptionid='.$row['Subscriptionid'].'">Review</a>');
     echo "</td></tr>";
   }
 echo "</table>";
