@@ -15,45 +15,48 @@
 <?php
 
   $fname = $_POST['fnameinput'];
+  $lname = $_POST['lnameinput'];
+  $email = $_POST['emailinput'];
+  $city = $_POST['cityinput'];
+  $state = $_POST['stateinput'];
+  $magazine = $_POST['magazineinput'];
+	  
   if ($fname="any"){
     $fname="is not null";
     } else {
         $fname='= ' + $fname;
     }
     
-  $lname = $_POST['lnameinput'];
   if ($lname="any"){
     $lname="is not null";
     } else {
         $lname='= ' + $lname;
     }
-  $email = $_POST['emailinput'];
+  
   if ($email="any"){
     $email="is not null";
     } else {
         $email='= ' + $email;
     }
-  $city = $_POST['cityinput'];
+  
   if ($city="any"){
     $city="is not null";
     } else {
         $city='= ' + $city;
     }
-  $state = $_POST['stateinput'];
+  
   if ($state="any"){
     $state="is not null";
     } else {
         $state='= ' + $state;
     }
-  $magazine = $_POST['magazineinput'];
+  
   if ($magazine="any"){
     $magazine="is not null";
     } else {
         $magazine='= ' + $magazine;
     }
   
-   
-
 require_once "dbconnection.php";
 //execute the follpwing query
 $query="select subscriptionid, magazinename, subscribersfname, subscriberslname, subscriptiondate, subscriptionperiod, city, state from subscription left join subscriber on subscription.subscriptionid=subscriber.subscriptionid left join magazine on subscription.magazineid=magazine.magazineid where subscribersfname' + $fname + ' and subscriberslname' + $lname + ' and email' + $email + ' and city' + $city + ' and state' + $state + ' and magazine' + $magazine + ' group by subscriptionid";
