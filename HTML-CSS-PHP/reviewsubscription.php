@@ -76,7 +76,7 @@ if(isset($_POST['submitbutton'])){
 	 <input type="radio" id="5star" name="stars" value="5" checked="checked">
     	 <label for="5star">5</label>
   <p>
-	  <input type="hidden" name="subscriptionid" value="<?= $subscriptionid ?></input>
+	  <input type="hidden" name="subscriptionid" value="<?= $subscriptionid ?"></input>
     <input type="submit" name="submitbutton" value="submit"></input>
   </p>
     </form>
