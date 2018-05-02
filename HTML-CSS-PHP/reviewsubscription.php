@@ -22,8 +22,8 @@ $sql = $pdo->prepare($query);
 $sql->execute(array(":subscriberid" => $subscriberid));
 
 $row = $sql->fetch(PDO::FETCH_ASSOC);
-$subscriberfname = $row['Subscriberfname'];
-$subscriberlname = $row['Subscriberlname'];
+$subscriberfname = $row['Subscribersfname'];
+$subscriberlname = $row['Subscriberslname'];
 
 if(isset($_POST['submitbutton'])){
   $query="INSERT INTO review (subscriptionid, stars, reviewdate) values (:subscriptionid, :stars, :reviewdate)";
