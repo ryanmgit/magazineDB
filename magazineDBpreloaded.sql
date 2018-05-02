@@ -108,7 +108,7 @@ INSERT INTO `subscription` (`Subscriptionid`,`Magazineid`, `Subscriberid`, `Subs
 (2, 1, 8, '2018-07-16', 'Weekly'),
 (3, 4, 3, '2018-03-01', 'Monthly'),
 (4, 6, 1, '2018-11-06', 'Weekly'),
-(5, 5, 1, '2018-01-03', 'WDaily'),
+(5, 5, 1, '2018-01-03', 'Daily'),
 (6, 2, 7, '2017-02-25', 'Weekly'),
 (7, 7, 4, '2018-04-26', 'Monthly'),
 (8, 2, 1, '2018-09-08', 'Weekly'),
