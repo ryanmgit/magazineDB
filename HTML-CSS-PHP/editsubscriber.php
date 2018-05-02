@@ -7,11 +7,11 @@ $sql = $pdo->prepare($query);
 $sql->execute(array(":subscriberid" => $_GET['subscriberid']));
 
 $row = $sql->fetch(PDO::FETCH_ASSOC); //read the next row od the query result into $row
-$tan = $row['Subscribersfname'];
-$ei = $row['Subscriberslname'];
-$ew = $row['Email'];
-$yid = $row['City'];
-$u = $row['State'];
+$subscribersfname = $row['Subscribersfname'];
+$subscriberslname = $row['Subscriberslname'];
+$email = $row['Email'];
+$city = $row['City'];
+$state = $row['State'];
 
 if(isset($_POST['updatebutton'])){
 	//execute the following sql statement
@@ -48,19 +48,19 @@ if(isset($_POST['updatebutton'])){
 <p>
   <form method="post">
 <p>Subscribers fname:
-  <input type="text" name="Subscribersfname" value="<?= $tan ?>">
+  <input type="text" name="subscribersfname" value="<?= $subscribersfname ?>">
 </p>
 <p>Subscribers lname:
-  <input type="text" name="Subscriberslname" value="<?= $ei ?>">
+  <input type="text" name="subscriberslname" value="<?= $subscriberslname ?>">
 </p>
 <p>Email:
-  <input type="text" name="Email" value="<?= $ew ?>">
+  <input type="text" name="email" value="<?= $email ?>">
 </p>
 <p>City:
-  <input type="text" name="City" value="<?= $yid ?>">
+  <input type="text" name="city" value="<?= $city ?>">
 </p>
 <p>State:
-  <input type="text" name="state" value="<?= $u ?>">
+  <input type="text" name="state" value="<?= $state ?>">
 </p>
 <p>
   <input type="submit" name="updatebutton" value="update">
