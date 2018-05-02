@@ -136,7 +136,6 @@ ALTER TABLE `subscriber`
 --
 ALTER TABLE `subscription`
   ADD PRIMARY KEY (`Magazineid`,`Subscriberid`);
-  --ADD KEY `fk2` (`Subscriberid`);
 
 --
 -- AUTO_INCREMENT for dumped tables
