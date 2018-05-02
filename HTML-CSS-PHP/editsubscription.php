@@ -10,16 +10,15 @@ $row = $sql->fetch(PDO::FETCH_ASSOC); //read the next row od the query result in
 $subscriptiondate = $row['Subscriptiondate'];
 $subscriptionperiod = $row['Subscriptionperiod'];
 $subscriberid = $row['Subscriberid'];
-$magazineid = $row['Magazineid'];
+
 
 if(isset($_POST['updatebutton'])){
   //execute the following sql statement
-  $query="UPDATE subscription SET subscriptiondate=:subscriptiondate, subscriptionperiod=:subscriptionperiod, magazineid=:magazineid WHERE subscriptionid=:subscriptionid";
+  $query="UPDATE subscription SET subscriptiondate=:subscriptiondate, subscriptionperiod=:subscriptionperiod WHERE subscriptionid=:subscriptionid";
   $sql=$pdo->prepare($query);
   $sql->execute(
   array(":subscriptiondate" => $_POST['subscriptiondate'],
         ":subscriptionperiod" => $_POST['subscriptionperiod'],
-        ":magazineid" => $_POST['magazineid'],
         ":subscriptionid" => $_GET['subscriptionid'])
                 );
       // end of the execution of the above sql statement
@@ -44,9 +43,6 @@ if(isset($_POST['updatebutton'])){
   <div class="php">
 <p>
   <form method="post">
-<p>Magazine id:
-  <input type="text" name="magazineid" value="<?= $magazineis ?>">
-</p>
 <p>Subscription date:
   <input type="text" name="subscriptiondate" value="<?= $subscriptiondate ?>">
 </p>
