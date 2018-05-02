@@ -89,7 +89,7 @@ echo "<tr><th>Magazine Name</th><th>Subscriber fname</th><th>Subscriber lname</t
     echo ('<a href="deletesubscription.php?subscriptionid='.$row['Subscriptionid'].'">Delete</a> / ');
     echo ('<a href="reviewsubscription.php?subscriptionid='.$row['Subscriptionid'].'">Review</a>');
     echo "</td></tr>";
-  }
+  };
 echo "</table>";
 ?>
   </div>
