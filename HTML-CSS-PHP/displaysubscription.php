@@ -21,12 +21,10 @@ $sql=$pdo->prepare($query);
 $sql->execute();
 
 echo "<table border='1'>";
-echo "<tr><th>Subscription id</th><th>Magazine id</th><th>Subscriber id</th><th>Subscriptiondate</th><th>Subscriptionperiod</th><th>Action</th></tr>";
+echo "<tr><th>Magazine id</th><th>Subscriber id</th><th>Subscriptiondate</th><th>Subscriptionperiod</th><th>Action</th></tr>";
 //$row = $sql->fetch(PDO::FETCH_ASSOC states that store the next row in the quesry result into $row
   while($row = $sql->fetch(PDO::FETCH_ASSOC)){//print out the query result row by row
     echo "<tr><td>";
-    echo ($row['Subscriptionid']);
-    echo "</td><td>";
     echo ($row['Magazineid']);
     echo "</td><td>";
     echo ($row['Subscriberid']);
