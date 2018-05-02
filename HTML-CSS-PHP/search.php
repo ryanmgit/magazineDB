@@ -24,42 +24,42 @@
   if ($fname="any"){
     $fname="is not null";
     } else {
-        $fname='= ' + $fname;
+        $fname='= ' . $fname;
     }
     
   if ($lname="any"){
     $lname="is not null";
     } else {
-        $lname='= ' + $lname;
+        $lname='= ' . $lname;
     }
   
   if ($email="any"){
     $email="is not null";
     } else {
-        $email='= ' + $email;
+        $email='= ' . $email;
     }
   
   if ($city="any"){
     $city="is not null";
     } else {
-        $city='= ' + $city;
+        $city='= ' . $city;
     }
   
   if ($state="any"){
     $state="is not null";
     } else {
-        $state='= ' + $state;
+        $state='= ' . $state;
     }
   
   if ($magazine="any"){
     $magazine="is not null";
     } else {
-        $magazine='= ' + $magazine;
+        $magazine='= ' . $magazine;
     }
   
 require_once "dbconnection.php";
 //execute the follpwing query
-$query="select subscriptionid, magazinename, subscribersfname, subscriberslname, subscriptiondate, subscriptionperiod, city, state from subscription left join subscriber on subscription.subscriptionid=subscriber.subscriptionid left join magazine on subscription.magazineid=magazine.magazineid where subscribersfname' + $fname + ' and subscriberslname' + $lname + ' and email' + $email + ' and city' + $city + ' and state' + $state + ' and magazine' + $magazine + ' group by subscriptionid";
+$query="select subscriptionid, magazinename, subscribersfname, subscriberslname, subscriptiondate, subscriptionperiod, city, state from subscription left join subscriber on subscription.subscriptionid=subscriber.subscriptionid left join magazine on subscription.magazineid=magazine.magazineid where subscribersfname' . $fname . ' and subscriberslname' . $lname . ' and email' . $email . ' and city' . $city . ' and state' . $state . ' and magazine' . $magazine . ' group by subscriptionid";
 $sql=$pdo->prepare($query); 
 $sql->execute();
 
