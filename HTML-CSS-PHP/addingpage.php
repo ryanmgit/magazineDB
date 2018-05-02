@@ -15,9 +15,9 @@
 <p>Add a new Subscriber below</p>
 <form method="post">
 <p>Subscriber First Name:
-<input type="text" name="subscriberfname"></p>
+<input type="text" name="subscribersfname"></p>
 <p>Subscriber Last Name:
-<input type="text" name="subscriberlname"></p>
+<input type="text" name="subscriberslname"></p>
 <p>Email:
 <input type="text" name="email" ></p>
 <p>City:
@@ -82,11 +82,11 @@ require_once "dbconnection.php";//connect to the database
 //after clicking the add button, the user input through the html form are saved as $_POST['accountname'],$_POST['email'],$_POST['addbutton']
 if(isset($_POST['addsubscriber'])){
   //the following 6 lines of code define and execute an sql statment
-  $query="insert into magazine (subscribersfname, subscriberslname, Email, City, State) values (:subscriberfname, :subscriberlname, :Email, :City, :State)";//:accountname,:email are placeholders for user input
+  $query="insert into magazine (subscribersfname, subscriberslname, Email, City, State) values (:subscribersfname, :subscriberslname, :Email, :City, :State)";//:accountname,:email are placeholders for user input
   $sql=$pdo->prepare($query);
   $sql->execute(
-  array(":subscriberfname" => $_POST['subscriberfname'],//the placeholders are defined using array()
-        ":subscriberlname" => $_POST['subscriberlname'],
+  array(":subscribersfname" => $_POST['subscribersfname'],//the placeholders are defined using array()
+        ":subscriberslname" => $_POST['subscriberslname'],
         ":email" => $_POST['email'],
         ":city" => $_POST['city'],
         ":state" => $_POST['state'])
