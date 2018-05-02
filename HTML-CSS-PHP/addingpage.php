@@ -82,7 +82,7 @@ require_once "dbconnection.php";//connect to the database
 //after clicking the add button, the user input through the html form are saved as $_POST['accountname'],$_POST['email'],$_POST['addbutton']
 if(isset($_POST['addsubscriber'])){
   //the following 6 lines of code define and execute an sql statment
-  $query="insert into magazine (subscriberfname, subscriberlname, Email, City, State) values (:subscriberfname, :subscriberlname, :Email, :City, :State)";//:accountname,:email are placeholders for user input
+  $query="insert into magazine (subscribersfname, subscriberslname, Email, City, State) values (:subscriberfname, :subscriberlname, :Email, :City, :State)";//:accountname,:email are placeholders for user input
   $sql=$pdo->prepare($query);
   $sql->execute(
   array(":subscriberfname" => $_POST['subscriberfname'],//the placeholders are defined using array()
@@ -91,7 +91,7 @@ if(isset($_POST['addsubscriber'])){
         ":city" => $_POST['city'],
         ":state" => $_POST['state'])
                 );
-  header('Location: displaysubscriber.php');//go to page index
+  header('Location: index.php');//go to page index
 };
 
 if(isset($_POST['addmagazine'])){
@@ -104,7 +104,7 @@ if(isset($_POST['addmagazine'])){
         ":city" => $_POST['city'],
         ":state" => $_POST['state'])
                 );
-  header('Location: displaymagazine.php');//go to page index
+  header('Location: index.html');//go to page index
 };
 
 if(isset($_POST['addsubscription'])){
@@ -115,7 +115,7 @@ if(isset($_POST['addsubscription'])){
   array(":subscriptiondate" => $_POST['subscriptiondate'],
         ":subscriptionperiod" => $_POST['subscriptionperiod'])
                 );
-  header('Location: displaysubscription.php');//go to page index
+  header('Location: index.html');//go to page index
 
 };
 ?>
