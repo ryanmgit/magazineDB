@@ -25,7 +25,7 @@
 <p>State:
 <input type="text" name="state"></p>
 
-<p><input type="submit" name="addsubscriber" value="Add a new Subscriber" onclick="location.href='displaysubscriber.php';/>
+<p><input type="submit" name="addsubscriber" value="Add a new Subscriber" onclick="location.href='displaysubscriber.php';"/>
 </p>
 </form>
 
@@ -41,7 +41,7 @@
 <p>State:
 <input type="text" name="state"></p>
 
-<p><input type="submit" name="addmagazine" value="Add a new Magazine" onclick="location.href='displaymagazine.php';/>
+<p><input type="submit" name="addmagazine" value="Add a new Magazine" onclick="location.href='displaymagazine.php';"/>
 </p>
 </form>
 
@@ -56,7 +56,7 @@
 <p>Subscription period:
 	<input type="text" name="subscriptionperiod"></p>
 </p>
-<p><input type="submit" name="addsubscription" value="Add a new Subscription" onclick="location.href='displaysubscription.php';/>
+<p><input type="submit" name="addsubscription" value="Add a new Subscription" onclick="location.href='displaysubscription.php';"/>
 </p>
 </form>
 
