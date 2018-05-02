@@ -5,6 +5,7 @@ require_once "dbconnection.php";
 $query="SELECT magazineid, subscriberid FROM subscription where subscriptionid = :subscriptionid";
 $sql=$pdo->prepare($query);
 $sql->execute(array(":subscriptionid" => $_GET['subscriptionid']));
+$row = $sql->fetch(PDO::FETCH_ASSOC);
 $magazineid = $row['Magazineid'];
 $subscriberid = $row['Subscriberid'];
 
