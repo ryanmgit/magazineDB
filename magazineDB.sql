@@ -133,7 +133,7 @@ INSERT INTO `subscription` (`Magazineid`, `Subscriberid`, `Subscriptiondate`, `S
 (1, 1, '2018-05-16', 'Weekly'),
 (4, 2, '2018-05-16', 'Daily'),
 (7, 3, '2018-05-16', 'Weekly'),
-(8, 8, '2018-05-16', 'Monthly'),
+(8, 8, '2018-05-16', 'Monthly');
 
 --
 -- Indexes for dumped tables
