@@ -18,7 +18,7 @@ if(isset($_POST['updatebutton'])){
         ":city" => $_POST['city'],
         ":state" => $_POST['state'],
         ":magazineid" => $_GET['magazineid'])
-                );
+        );
   header('Location: displaymagazine.php');
 };
 ?>
