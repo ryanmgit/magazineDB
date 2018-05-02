@@ -5,20 +5,20 @@ require_once "dbconnection.php";
 $query="SELECT magazineid, subscriberid FROM subscription where subscriptionid = :subscriptionid";
 $sql=$pdo->prepare($query);
 $sql->execute(array(":subscriptionid" => $_GET['subscriptionid']));
-$magazineid = $row['magazineid'];
-$subscriberid = $row['subscriberid'];
+$magazineid = $row['Magazineid'];
+$subscriberid = $row['Subscriberid'];
 
 $query="SELECT magazinename FROM magazine where magazineid = :magazineid";
 $sql = $pdo->prepare($query);
 $sql->execute(array(":magazineid" => $_GET['magazineid']));
 $row = $sql->fetch(PDO::FETCH_ASSOC);
-$magazinename = $row['magazinename'];
+$magazinename = $row['Magazinename'];
 
 $query="SELECT subscribersfname, subscriberslname FROM subscriber where subscriberid = :subscriberid";
 $sql = $pdo->prepare($query);
 $sql->execute(array(":subscriberid" => $_GET['subscriberid']));
 $row = $sql->fetch(PDO::FETCH_ASSOC);
-$subscribername = $row['subscriberfname'] + ' ' + $row['subscriber'name'];
+$subscribername = $row['Subscriberfname'] + ' ' + $row['Subscriber'name'];
 
 if(isset($_POST['submitbutton'])){
   $query="INSERT INTO review (subscriptionid, stars, reviewdate) values (:subscriptionid,:stars,:reviewdate)";
