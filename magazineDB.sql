@@ -108,6 +108,34 @@ CREATE TABLE `subscription` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
+-- Dumping data for table `subscription`
+--
+
+INSERT INTO `subscription` (`Magazineid`, `Subscriberid`, `Subscriptiondate`, `Subscriptionperiod`) VALUES
+(8, 1, '2018-05-16', 'Daily'),
+(1, 8, '2018-05-16', 'Weekly'),
+(4, 3, '2018-05-16', 'Monthly'),
+(6, 1, '2018-05-16', 'Weekly'),
+(5, 1, '2018-05-16', 'WDaily'),
+(2, 7, '2018-05-16', 'Weekly'),
+(7, 4, '2018-05-16', 'Monthly'),
+(2, 1, '2018-05-16', 'Weekly'),
+(6, 5, '2018-05-16', 'Weekly'),
+(5, 1, '2018-05-16', 'Daily'),
+(4, 2, '2018-05-16', 'Weekly'),
+(1, 3, '2018-05-16', 'Monthly'),
+(2, 8, '2018-05-16', 'Weekly'),
+(6, 1, '2018-05-16', 'Daily'),
+(7, 6, '2018-05-16', 'Weekly'),
+(8, 3, '2018-05-16', 'Monthly'),
+(8, 4, '2018-05-16', 'Weekly'),
+(3, 7, '2018-05-16', 'Daily'),
+(1, 1, '2018-05-16', 'Weekly'),
+(4, 2, '2018-05-16', 'Daily'),
+(7, 3, '2018-05-16', 'Weekly'),
+(8, 8, '2018-05-16', 'Monthly'),
+
+--
 -- Indexes for dumped tables
 --
 
