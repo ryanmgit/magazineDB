@@ -142,7 +142,7 @@ ALTER TABLE `magazine`
 --
 ALTER TABLE `review`
   ADD PRIMARY KEY (`Reviewid`),
-  ADD KEY `fk3` (`Subscriptionid`),
+  ADD KEY `fk3` (`Subscriptionid`);
   
 
 --
