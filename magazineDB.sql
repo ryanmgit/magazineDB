@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 --
 -- Database: `magazineDB`
 --
-DROP DATABASE magazineDB;
+DROP DATABASE IF EXISTS magazineDB;
 CREATE DATABASE magazineDB DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 USE `magazineDB`;
 
