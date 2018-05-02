@@ -21,11 +21,11 @@
 <p>Email:
 <input type="text" name="email" ></p>
 <p>City:
-<input type="text" name="City"></p>
+<input type="text" name="city"></p>
 <p>State:
-<input type="text" name="State"></p>
+<input type="text" name="state"></p>
 
-<p><input type="submit" name="addsubscriber" value="Add a new Subscriber"/>
+<p><input type="submit" name="addsubscriber" value="Add a new Subscriber" onclick="location.href='displaysubscriber.php';/>
 </p>
 </form>
 
@@ -37,11 +37,11 @@
 <p>Type:
 <input type="text" name="type"></p>
 <p>City:
-<input type="text" name="City"></p>
+<input type="text" name="city"></p>
 <p>State:
-<input type="text" name="State"></p>
+<input type="text" name="state"></p>
 
-<p><input type="submit" name="addmagazine" value="Add a new Magazine"/>
+<p><input type="submit" name="addmagazine" value="Add a new Magazine" onclick="location.href='displaymagazine.php';/>
 </p>
 </form>
 
@@ -56,7 +56,7 @@
 <p>Subscription period:
 	<input type="text" name="subscriptionperiod"></p>
 </p>
-<p><input type="submit" name="addsubscription" value="Add a new Subscription"/>
+<p><input type="submit" name="addsubscription" value="Add a new Subscription" onclick="location.href='displaysubscription.php';/>
 </p>
 </form>
 
