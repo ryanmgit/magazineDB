@@ -56,7 +56,7 @@
 
 require_once "dbconnection.php";
 //execute the follpwing query
-$query="select Subscriptionid, Magazinename, Subscriberfname, Subscriberlname, Subscriptiondate, Subscriptionperiod, City, State, Magazine from subscription left join subscriber on subscription.subscriptionid=subscriber.subscriptionid left join magazine on subscription.magazineid=magazine.magazineid where Subscriberfname' + $fname + ' and Subscriberlname' + $lname + ' and Email' + $email + ' and City' + $city + ' and State' + $state + ' and Magazine' + $magazine + ' group by subscriptionid";
+$query="select Subscriptionid, Magazinename, Subscribersfname, Subscriberslname, Subscriptiondate, Subscriptionperiod, City, State, Magazine from subscription left join subscriber on subscription.subscriptionid=subscriber.subscriptionid left join magazine on subscription.magazineid=magazine.magazineid where Subscribersfname' + $fname + ' and Subscriberslname' + $lname + ' and Email' + $email + ' and City' + $city + ' and State' + $state + ' and Magazine' + $magazine + ' group by subscriptionid";
 $sql=$pdo->prepare($query); 
 $sql->execute();
 
@@ -69,9 +69,9 @@ echo "<tr><th>Subscription id</th><th>Magazine name</th><th>Subscriber fname</th
     echo "</td><td>";
     echo ($row['Magazinename']);
     echo "</td><td>";
-    echo ($row['Subscriberfname']);
+    echo ($row['Subscribersfname']);
     echo "</td><td>";
-    echo ($row['Subscriberlname']);
+    echo ($row['Subscriberslname']);
     echo "</td><td>";
     echo ($row['Subscriptiondate']);
     echo "</td><td>";
