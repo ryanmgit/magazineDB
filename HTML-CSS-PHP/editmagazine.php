@@ -4,10 +4,10 @@ $query="SELECT * FROM magazine where magazineid = :magazineid";
 $sql = $pdo->prepare($query);
 $sql->execute(array(":magazineid" => $_GET['magazineid']));
 $row = $sql->fetch(PDO::FETCH_ASSOC);
-$jn = $row['Magazinename'];
-$lil = $row['Type'];
-$pil = $row['City'];
-$jiid = $row['State'];
+$magazinename = $row['Magazinename'];
+$type = $row['Type'];
+$city = $row['City'];
+$state = $row['State'];
 
 if(isset($_POST['updatebutton'])){
   $query="UPDATE magazine SET magazinename=:magazinename, type=:type, city=:city, state=:state WHERE magazineid=:magazineid";
@@ -41,16 +41,16 @@ if(isset($_POST['updatebutton'])){
 <p>
   <form method="post">
 <p>Magazine name:
-  <input type="text" name="Magazinename" value="<?= $jn ?>">
+  <input type="text" name="magazinename" value="<?= $magazinename ?>">
 </p>
 <p>Type:
-  <input type="text" name="Type" value="<?= $lil ?>">
+  <input type="text" name="type" value="<?= $type ?>">
 </p>
 <p>City:
-  <input type="text" name="City" value="<?= $pil ?>">
+  <input type="text" name="city" value="<?= $city ?>">
 </p>
 <p>State:
-  <input type="text" name="State" value="<?= $jiid ?>">
+  <input type="text" name="state" value="<?= $state ?>">
 </p>
 <p>
   <input type="submit" name="updatebutton" value="update">
