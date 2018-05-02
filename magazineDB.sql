@@ -45,7 +45,7 @@ INSERT INTO `magazine` (`Magazineid`, `Magazinename`, `Type`, `City`, `State`) V
 (1, 'National Enquirer', 'Tabloid', 'New York', 'NY'),
 (2, 'Time', 'News', 'New York', 'NY'),
 (3, 'People', 'Gossip', 'Los Angeles', 'CA'),
-(4, 'Smithsonian', 'History', 'Washington', 'DC');
+(4, 'Smithsonian', 'History', 'Washington', 'DC'),
 (5, 'National Geographic', 'History', 'New York', 'NY'),
 (6, 'LA Magazine', 'News', 'Los Angeles', 'CA'),
 (7, 'Vanity Fair', 'Gossip', 'Hollywood', 'CA'),
@@ -88,7 +88,7 @@ INSERT INTO `subscriber` (`Subscriberid`, `Subscribersfname`, `Subscriberslname`
 (1, 'Ryan', 'Minsk', 'ryan@gwu.edu', 'Sacramento', 'CA'),
 (2, 'Jared', 'Kushner', 'jkjk@gwu.edu', 'Los Al', 'CA'),
 (3, 'Zach', 'Bass', 'zizi@gwu.edu', 'Miami', 'FL'),
-(4, 'Emma', 'Bishop', 'em@gwu.edu', 'San Diego', 'CA');
+(4, 'Emma', 'Bishop', 'em@gwu.edu', 'San Diego', 'CA'),
 (5, 'Joe', 'Smith', 'joe@gwu.edu', 'Long Beach', 'CA'),
 (6, 'Kiki', 'Jordan', 'kiki@gwu.edu', 'Los Al', 'CA'),
 (7, 'Jeff', 'Santos', 'jj@gwu.edu', 'Miami', 'FL'),
@@ -135,7 +135,7 @@ ALTER TABLE `subscriber`
 -- Indexes for table `subscription`
 --
 ALTER TABLE `subscription`
-  ADD PRIMARY KEY (`Magazineid`,`Subscriberid`),
+  ADD PRIMARY KEY (`Magazineid`,`Subscriberid`);
   --ADD KEY `fk2` (`Subscriberid`);
 
 --
