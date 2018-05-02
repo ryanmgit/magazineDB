@@ -82,7 +82,7 @@ require_once "dbconnection.php";//connect to the database
 //after clicking the add button, the user input through the html form are saved as $_POST['accountname'],$_POST['email'],$_POST['addbutton']
 if(isset($_POST['addsubscriber'])){
   //the following 6 lines of code define and execute an sql statment
-  $query="insert into magazine (subscribersfname, subscriberslname, Email, City, State) values (:subscribersfname, :subscriberslname, :Email, :City, :State)";//:accountname,:email are placeholders for user input
+  $query="insert into subscriber(subscribersfname, subscriberslname, Email, City, State) values (:subscribersfname, :subscriberslname, :Email, :City, :State)";//:accountname,:email are placeholders for user input
   $sql=$pdo->prepare($query);
   $sql->execute(
   array(":subscribersfname" => $_POST['subscribersfname'],//the placeholders are defined using array()
@@ -109,7 +109,7 @@ if(isset($_POST['addmagazine'])){
 
 if(isset($_POST['addsubscription'])){
   //the following 6 lines of code define and execute an sql statment
-  $query="insert into magazine (magazineid, subscriberid, subscriptiondate, subscriptionperiod) values (:subscriptiondate, :subscriptionperiod)";//:accountname,:email are placeholders for user input
+  $query="insert into subscription (magazineid, subscriberid, subscriptiondate, subscriptionperiod) values (:subscriptiondate, :subscriptionperiod)";//:accountname,:email are placeholders for user input
   $sql=$pdo->prepare($query);
   $sql->execute(
   array(":subscriptiondate" => $_POST['subscriptiondate'],
