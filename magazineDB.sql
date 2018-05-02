@@ -112,7 +112,7 @@ CREATE TABLE `subscription` (
 -- Dumping data for table `subscription`
 --
 
-INSERT INTO `subscription` (`Subscriberid`,`Magazineid`, `Subscriberid`, `Subscriptiondate`, `Subscriptionperiod`) VALUES
+INSERT INTO `subscription` (`Subscriptionid`,`Magazineid`, `Subscriberid`, `Subscriptiondate`, `Subscriptionperiod`) VALUES
 (1, 8, 1, '2018-05-16', 'Daily'),
 (2, 1, 8, '2018-05-16', 'Weekly'),
 (3, 4, 3, '2018-05-16', 'Monthly'),
