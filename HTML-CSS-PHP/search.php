@@ -64,12 +64,10 @@ $sql=$pdo->prepare($query);
 $sql->execute();
 	 
 echo "<table class='php'>";
-echo "<tr><th>Subscription id</th><th>Magazine Name</th><th>Subscriber fname</th><th>Subscriber lname</th><th>Subscription Date</th><th>Subscription Period</th><th>Subscriber City</th><th>Subscriber State</th><th>Email</th><th>Action</th></tr>";
+echo "<tr><th>Magazine Name</th><th>Subscriber fname</th><th>Subscriber lname</th><th>Subscription Date</th><th>Subscription Period</th><th>Subscriber City</th><th>Subscriber State</th><th>Email</th><th>Action</th></tr>";
 //$row = $sql->fetch(PDO::FETCH_ASSOC states that store the next row in the quesry result into $row
   while($row = $sql->fetch(PDO::FETCH_ASSOC)){//print out the query result row by row
     echo "<tr><td>";
-    echo ($row['Subscriptionid']);
-    echo "</td><td>";
     echo ($row['Magazinename']);
     echo "</td><td>";
     echo ($row['Subscribersfname']);
