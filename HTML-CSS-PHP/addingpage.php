@@ -90,7 +90,7 @@ if(isset($_POST['addsubscriber'])){
         ":email" => $_POST['email'],
         ":city" => $_POST['city'],
         ":state" => $_POST['state'])
-                );
+  );
   header('Location: displaysubscriber.php');//go to subscribers
 };
 
@@ -103,7 +103,7 @@ if(isset($_POST['addmagazine'])){
         ":type" => $_POST['type'],
         ":city" => $_POST['city'],
         ":state" => $_POST['state'])
-                );
+  );
   header('Location: displaymagazine.php');//go to magazines
 };
 
@@ -114,7 +114,7 @@ if(isset($_POST['addsubscription'])){
   $sql->execute(
   array(":subscriptiondate" => $_POST['subscriptiondate'],
         ":subscriptionperiod" => $_POST['subscriptionperiod'])
-                );
+  );
   header('Location: displaysubscription.php');//go to subscriptions
 
 };
