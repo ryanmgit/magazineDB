@@ -59,7 +59,7 @@
   
 require_once "dbconnection.php";
 //execute the follpwing query
-$query='select subscriptionid, magazinename, subscribersfname, subscriberslname, subscriptiondate, subscriptionperiod, subscriber.city, subscriber.state, from subscription left join subscriber on subscription.subscriberid=subscriber.subscriberid left join magazine on subscription.magazineid=magazine.magazineid where subscribersfname' . $fname . ' and subscriberslname' . $lname . ' and email' . $email . ' and subscriber.city' . $city . ' and subscriber.state' . $state . ' and magazinename' . $magazine . ' group by subscriptionid;';
+$query='select subscriptionid, magazinename, subscribersfname, subscriberslname, subscriptiondate, subscriptionperiod, subscriber.city, subscriber.state from subscription left join subscriber on subscription.subscriberid=subscriber.subscriberid left join magazine on subscription.magazineid=magazine.magazineid where subscribersfname' . $fname . ' and subscriberslname' . $lname . ' and email' . $email . ' and subscriber.city' . $city . ' and subscriber.state' . $state . ' and magazinename' . $magazine . ' group by subscriptionid;';
 $sql=$pdo->prepare($query); 
 $sql->execute();
 	 
