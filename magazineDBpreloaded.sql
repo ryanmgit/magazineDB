@@ -51,8 +51,7 @@ INSERT INTO `magazine` (`Magazineid`, `Magazinename`, `Type`, `City`, `State`) V
 
 CREATE TABLE `review` (
   `Reviewid` int(11) NOT NULL,
-  `Magazineid` int(11) DEFAULT NULL,
-  `Subscriberid` int(11) DEFAULT NULL,
+  `Subscriptionid` int(11) DEFAULT NULL,
   `Stars` int(11) NOT NULL,
   `Reviewdate` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -143,8 +142,8 @@ ALTER TABLE `magazine`
 --
 ALTER TABLE `review`
   ADD PRIMARY KEY (`Reviewid`),
-  ADD KEY `fk3` (`Magazineid`),
-  ADD KEY `fk4` (`Subscriberid`);
+  ADD KEY `fk3` (`Subscriptionid`),
+  
 
 --
 -- Indexes for table `subscriber`
