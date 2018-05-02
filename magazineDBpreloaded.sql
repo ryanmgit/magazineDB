@@ -1,11 +1,3 @@
--- phpMyAdmin SQL Dump
--- version 4.7.7
--- https://www.phpmyadmin.net/
---
--- Host: localhost:8889
--- Generation Time: May 02, 2018 at 01:38 AM
--- Server version: 5.6.38
--- PHP Version: 7.2.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,11 +9,11 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `magazineDB`
+-- Database: `magazineDBpreloaded`
 --
-DROP DATABASE IF EXISTS magazineDB;
-CREATE DATABASE magazineDB DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
-USE `magazineDB`;
+DROP DATABASE IF EXISTS magazineDBpreloaded;
+CREATE DATABASE magazineDBpreloaded DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `magazineDBpreloaded`;
 
 -- --------------------------------------------------------
 
