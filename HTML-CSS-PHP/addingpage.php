@@ -96,7 +96,7 @@ if(isset($_POST['addsubscriber'])){
 
 if(isset($_POST['addmagazine'])){
   //the following 6 lines of code define and execute an sql statment
-  $query="insert into magazine (magazinename, magazineid, type, City, State) values (:magazinename, :type, :City, :State)";//:accountname,:email are placeholders for user input
+  $query="insert into magazine (magazinename, type, City, State) values (:magazinename, :type, :City, :State)";//:accountname,:email are placeholders for user input
   $sql=$pdo->prepare($query);
   $sql->execute(
   array(":magazinename" => $_POST['magazinename'],//the placeholders are defined using array()
