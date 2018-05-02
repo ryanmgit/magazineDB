@@ -36,9 +36,8 @@ echo "<tr><th>Magazine id</th><th>Magazine name</th><th>Type</th><th>City</th><t
     echo ($row['State']);
     echo "</td><td>";
 //clicking on differnt links leads to corresponding editing pages
-    echo ('<a href="editmagazine.php?magazineid='.$row['Magazineid'].'">Edit</a> /');
-    echo ('<a href="deletemagazine.php?magazineid='.$row['Magazineid'].'">Delete</a> / ');
-    echo ('<a href="reviewmagazine.php?magazineid='.$row['Magazineid'].'">Review</a>');
+    echo ('<a href="editmagazine.php?magazineid='.$row['Magazineid'].'">Edit</a> / ');
+    echo ('<a href="deletemagazine.php?magazineid='.$row['Magazineid'].'">Delete</a>');
     echo "</td></tr>";
   }
 echo "</table>";
