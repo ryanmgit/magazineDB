@@ -55,13 +55,13 @@ if(isset($_POST['submitbutton'])){
   <p>
     <form method="post">
   <p>Magazine name:
-    <input type="text" name="magazinename" value="<?= $magazinename ?>" readonly>
+    <input type="text" name="magazinename" value="<?= $magazinename ?>" readonly="readonly">
   </p>
   <p>Subscriber first name:
-    <input type="text" name="subscriberfname" value="'<?= $subscriberfname ?>'" readonly>
+    <input type="text" name="subscriberfname" value="<?= $subscriberfname ?>" readonly="readonly">
   </p>
   <p>Subscriber last name:
-    <input type="text" name="subscriberlname" value="'<?= $subscriberlname ?>'" readonly>
+    <input type="text" name="subscriberlname" value="<?= $subscriberlname ?>" readonly="readonly">
   </p>
   <p>Star Rating:
 	 <input type="radio" id="1star" name="stars" value="1">
