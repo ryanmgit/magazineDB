@@ -21,37 +21,37 @@
   $state = $_POST['stateinput'];
   $magazine = $_POST['magazineinput'];
 	  
-  if ($fname="any"){
+  if ($fname=="any" || $fname=="Any"){
     $fname=" is not null";
     } else {
         $fname='="' . $fname . '"';
     }
     
-  if ($lname="any"){
+  if ($lname=="any" || $lname=="Any"){
     $lname=" is not null";
     } else {
         $lname='="' . $lname . '"';
     }
   
-  if ($email="any"){
+  if ($email=="any" || $email=="Any"){
     $email=" is not null";
     } else {
         $email='="' . $email . '"';
     }
   
-  if ($city="any"){
+  if ($city=="any" || $city=="Any"){
     $city=" is not null";
     } else {
         $city='="' . $city . '"';
     }
   
-  if ($state="any"){
+  if ($state=="any" || $state=="Any"){
     $state=" is not null";
     } else {
         $state='="' . $state . '"';
     }
   
-  if ($magazine="any"){
+  if ($magazine=="any" || $magazine=="Any"){
     $magazine=" is not null";
     } else {
         $magazine='="' . $magazine . '"';
