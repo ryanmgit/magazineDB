@@ -148,3 +148,7 @@ select{
 	height: 80%;
 	text-align: center;
 }
+input[type=radio]{
+	float: right;
+}
+	
