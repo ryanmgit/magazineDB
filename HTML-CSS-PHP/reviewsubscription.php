@@ -35,7 +35,7 @@ if(isset($_POST['submitbutton'])){
         ":subscriptionid" => $_GET['subscriptionid'])
                );
 //they are defenitions for :businessname,:city,:state
-  header('Location: displaymagazine.php');//go back
+  header('Location: displaysubscription.php');//go back
 };
 
 
