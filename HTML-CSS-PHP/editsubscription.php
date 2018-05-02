@@ -14,7 +14,7 @@ $rid = $row['Magazineid'];
 
 if(isset($_POST['updatebutton'])){
   //execute the following sql statement
-  $query="UPDATE subscription SET subscriptiondate=:subscriptiondate, subscriptionperiod=:subscriptionperiod WHERE subscriptionid=:subscriptionid";
+  $query="UPDATE subscription SET subscriptiondate=:subscriptiondate, subscriptionperiod=:subscriptionperiod, magazineid=:magazineid WHERE subscriptionid=:subscriptionid";
   $sql=$pdo->prepare($query);
   $sql->execute(
   array(":subscriptiondate" => $_POST['subscriptiondate'],
