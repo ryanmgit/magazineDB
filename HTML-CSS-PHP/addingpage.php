@@ -91,7 +91,7 @@ if(isset($_POST['addsubscriber'])){
         ":city" => $_POST['city'],
         ":state" => $_POST['state'])
                 );
-  header('Location: index.php');//go to page index
+  header('Location: displaysubscriber.php');//go to page index
 };
 
 if(isset($_POST['addmagazine'])){
@@ -104,7 +104,7 @@ if(isset($_POST['addmagazine'])){
         ":city" => $_POST['city'],
         ":state" => $_POST['state'])
                 );
-  header('Location: index.html');//go to page index
+  header('Location: displaymagazine.php');//go to page index
 };
 
 if(isset($_POST['addsubscription'])){
@@ -115,7 +115,7 @@ if(isset($_POST['addsubscription'])){
   array(":subscriptiondate" => $_POST['subscriptiondate'],
         ":subscriptionperiod" => $_POST['subscriptionperiod'])
                 );
-  header('Location: index.html');//go to page index
+  header('Location: displaysubscription.php');//go to page index
 
 };
 ?>
