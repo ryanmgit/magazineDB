@@ -12,21 +12,21 @@ $subscriberid = $row['Subscriberid'];
 
 $query="SELECT magazinename FROM magazine where magazineid = :magazineid";
 $sql = $pdo->prepare($query);
-$sql->execute(array(":magazineid" => '$magazineid'));
+$sql->execute(array(":magazineid" => $magazineid));
 
 $row = $sql->fetch(PDO::FETCH_ASSOC);
 $magazinename = $row['Magazinename'];
 
 $query="SELECT subscribersfname, subscriberslname FROM subscriber where subscriberid = :subscriberid";
 $sql = $pdo->prepare($query);
-$sql->execute(array(":subscriberid" => '$subscriberid'));
+$sql->execute(array(":subscriberid" => $subscriberid));
 
 $row = $sql->fetch(PDO::FETCH_ASSOC);
 $subscriberfname = $row['Subscriberfname'];
 $subscriberlname = $row['Subscriberlname'];
 
 if(isset($_POST['submitbutton'])){
-  $query="INSERT INTO review (subscriptionid, stars, reviewdate) values (:subscriptionid,:stars,:reviewdate)";
+  $query="INSERT INTO review (subscriptionid, stars, reviewdate) values (:subscriptionid, :stars, :reviewdate)";
   $sql=$pdo->prepare($query);
   $sql->execute(
   array(":reviewdate" => date("y-m-d-"),// date("y-m-d") generates the date format in yyyy-mm-dd.
