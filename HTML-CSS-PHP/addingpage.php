@@ -53,9 +53,13 @@
 <input type="text" name="magazineid"></p>
 <p>Subscription Date:
 <input type="text" name="subscriptiondate"></p>
-<p>Subscription Period:
-<input type="text" name="subscriptionperiod"></p>
-
+<p>Subscription period:
+	<select>
+		<option value="'Daily'" <?php if ($subscriptionperiod == "Daily") echo "selected='selected'";?> >Daily</option>
+		<option value="'Weekly'" <?php if ($subscriptionperiod == "Weekly") echo "selected='selected'";?> >Weekly</option>
+		<option value="'Monthly'" <?php if ($subscriptionperiod == "Monthly") echo "selected='selected'";?> >Monthly</option>
+	</select>
+</p>
 <p><input type="submit" name="addsubscription" value="Add a new Subscription"/>
 </p>
 </form>
