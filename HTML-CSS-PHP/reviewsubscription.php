@@ -18,7 +18,8 @@ $query="SELECT subscribersfname, subscriberslname FROM subscriber where subscrib
 $sql = $pdo->prepare($query);
 $sql->execute(array(":subscriberid" => $_GET['subscriberid']));
 $row = $sql->fetch(PDO::FETCH_ASSOC);
-$subscribername = $row['Subscriberfname'] + ' ' + $row['Subscriber'name'];
+$subscriberfname = $row['Subscriberfname'];
+$subscriberlname = $row['Subscriberlname'];
 
 if(isset($_POST['submitbutton'])){
   $query="INSERT INTO review (subscriptionid, stars, reviewdate) values (:subscriptionid,:stars,:reviewdate)";
@@ -52,8 +53,11 @@ if(isset($_POST['submitbutton'])){
   <p>Magazine name:
     <input type="text" name="magazinename" value="<?= $magazinename ?>" readonly>
   </p>
-  <p>Subscriber name:
-    <input type="text" name="subscribername" value="'<?= $subscribername ?>'" readonly>
+  <p>Subscriber first name:
+    <input type="text" name="subscriberfname" value="'<?= $subscriberfname ?>'" readonly>
+  </p>
+  <p>Subscriber last name:
+    <input type="text" name="subscriberlname" value="'<?= $subscriberlname ?>'" readonly>
   </p>
   <p>Star Rating:
 	 <input type="radio" id="1star" name="stars" value="1">
