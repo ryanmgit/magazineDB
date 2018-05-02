@@ -10,13 +10,13 @@ $subscriberid = $row['Subscriberid'];
 
 $query="SELECT magazinename FROM magazine where magazineid = :magazineid";
 $sql = $pdo->prepare($query);
-$sql->execute(array(":magazineid" => $_GET['magazineid']));
+$sql->execute(array(":magazineid" => $magazineid']));
 $row = $sql->fetch(PDO::FETCH_ASSOC);
 $magazinename = $row['Magazinename'];
 
 $query="SELECT subscribersfname, subscriberslname FROM subscriber where subscriberid = :subscriberid";
 $sql = $pdo->prepare($query);
-$sql->execute(array(":subscriberid" => $_GET['subscriberid']));
+$sql->execute(array(":subscriberid" => $subscriberid']));
 $row = $sql->fetch(PDO::FETCH_ASSOC);
 $subscriberfname = $row['Subscriberfname'];
 $subscriberlname = $row['Subscriberlname'];
