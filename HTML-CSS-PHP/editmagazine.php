@@ -19,7 +19,7 @@ if(isset($_POST['updatebutton'])){
         ":state" => $_POST['state'],
         ":magazineid" => $_GET['magazineid'])
         );
-  $pdo->commit();
+
   header('Location: displaymagazine.php');
 };
 ?>
