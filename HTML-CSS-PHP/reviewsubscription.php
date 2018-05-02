@@ -5,19 +5,22 @@ require_once "dbconnection.php";
 $query="SELECT magazineid, subscriberid FROM subscription where subscriptionid = :subscriptionid";
 $sql=$pdo->prepare($query);
 $sql->execute(array(":subscriptionid" => $_GET['subscriptionid']));
+
 $row = $sql->fetch(PDO::FETCH_ASSOC);
 $magazineid = $row['Magazineid'];
 $subscriberid = $row['Subscriberid'];
 
 $query="SELECT magazinename FROM magazine where magazineid = :magazineid";
 $sql = $pdo->prepare($query);
-$sql->execute(array(":magazineid" => $magazineid));
+$sql->execute(array(":magazineid" => '$magazineid'));
+
 $row = $sql->fetch(PDO::FETCH_ASSOC);
 $magazinename = $row['Magazinename'];
 
 $query="SELECT subscribersfname, subscriberslname FROM subscriber where subscriberid = :subscriberid";
 $sql = $pdo->prepare($query);
-$sql->execute(array(":subscriberid" => $subscriberid));
+$sql->execute(array(":subscriberid" => '$subscriberid'));
+
 $row = $sql->fetch(PDO::FETCH_ASSOC);
 $subscriberfname = $row['Subscriberfname'];
 $subscriberlname = $row['Subscriberlname'];
