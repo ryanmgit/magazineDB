@@ -37,7 +37,7 @@ if(isset($_POST['addsubscription'])){
   $sql=$pdo->prepare($query);
   $sql->execute(
   array(":magazineid" => $_POST['magazineid'],
-	":magazineid" => $_POST['magazineid'],
+	":subscriberid" => $_POST['subscriberid'],
 	":subscriptiondate" => $_POST['subscriptiondate'],
         ":subscriptionperiod" => $_POST['subscriptionperiod'])
   );
