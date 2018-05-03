@@ -1,3 +1,4 @@
+-- phpMyAdmin SQL preloaded startup file THIS WILL DELETE EVERYTHING IN magazinedbpreloaded
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
