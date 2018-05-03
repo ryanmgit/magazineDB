@@ -68,21 +68,21 @@ echo "<tr><th>Magazine Name</th><th>Subscriber fname</th><th>Subscriber lname</t
 //$row = $sql->fetch(PDO::FETCH_ASSOC states that store the next row in the quesry result into $row
   while($row = $sql->fetch(PDO::FETCH_ASSOC)){//print out the query result row by row
     echo "<tr><td>";
-    echo ($row['Magazinename']);
+    echo ($row['magazinename']);
     echo "</td><td>";
-    echo ($row['Subscribersfname']);
+    echo ($row['subscribersfname']);
     echo "</td><td>";
-    echo ($row['Subscriberslname']);
+    echo ($row['subscriberslname']);
     echo "</td><td>";
-    echo ($row['Subscriptiondate']);
+    echo ($row['subscriptiondate']);
     echo "</td><td>";
-    echo ($row['Subscriptionperiod']);
+    echo ($row['subscriptionperiod']);
     echo "</td><td>";
-    echo ($row['City']);
+    echo ($row['city']);
     echo "</td><td>";
-    echo ($row['State']);
+    echo ($row['state']);
     echo "</td><td>";
-    echo ($row['Email']);
+    echo ($row['email']);
     echo "</td><td>";
 //clicking on different links leads to corresponding editing pages
     echo ('<a href="editsubscription.php?subscriptionid='.$row['Subscriptionid'].'">Edit</a> / ');
