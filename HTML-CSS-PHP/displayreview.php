@@ -45,7 +45,7 @@ echo "</table>";
   <p>
 	</p>
   <div class="button">
-		<input type="button" class="cancelbutton" value="Cancel" onclick="location.href='index.html';">
+		<input type="button" class="cancelbutton" value="Cancel" onclick="location.href='index.html';" align-contents='center'>
 	</div>
 
 </div>
