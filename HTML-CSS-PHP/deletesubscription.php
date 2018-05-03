@@ -15,7 +15,7 @@ if(isset($_POST['yesbutton'])){
   $sql=$pdo->prepare($query);
   $sql->execute(
   array(
-        ":subscriptionid" => $_GET['subscriptionid'])
+        ":subscriptionid" => $_GET['Subscriptionid'])
                 );
   header('Location: displaysubscription.php');
 };
