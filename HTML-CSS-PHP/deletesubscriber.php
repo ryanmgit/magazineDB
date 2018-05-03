@@ -11,6 +11,9 @@ $email = $row['Email'];
 $city = $row['City'];
 $state = $row['State'];
 if(isset($_POST['yesbutton'])){
+	$query="DELETE FROM review WHERE subscriptionid=(SELECT subscriptionid from subscription WHERE subscriberid=:subscriberid)";
+	$sql=$pdo->prepare($query);
+	$sql->execute(array(":subscriberid" => $_GET['subscriberid']));
 	$query="DELETE FROM subscription WHERE subscriberid=:subscriberid";
 	$sql=$pdo->prepare($query);
 	$sql->execute(array(":subscriberid" => $_GET['subscriberid']));
