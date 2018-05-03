@@ -50,7 +50,7 @@ if(isset($_POST['submitbutton'])){
 <div class="background">
 <div class="fullform">
 	<div class="welcometext">
-		Review a Magazine
+		Review Your Subscription
 	</div>
   <div class="php">
   <p>
@@ -66,15 +66,15 @@ if(isset($_POST['submitbutton'])){
   </p>
   <p>Star Rating:
 	 <input type="radio" id="1star" name="stars" value="1">
-    	 <label for="1star">1</label>
+    	 <label class="radio" for="1star">1</label>
 	 <input type="radio" id="2star" name="stars" value="2">
-    	 <label for="2star">2</label>
+    	 <label class="radio" for="2star">2</label>
 	 <input type="radio" id="3star" name="stars" value="3">
-    	 <label for="3star">3</label>
+    	 <label class="radio" for="3star">3</label>
 	 <input type="radio" id="4star" name="stars" value="4">
-    	 <label for="4star">4</label>
+    	 <label class="radio" for="4star">4</label>
 	 <input type="radio" id="5star" name="stars" value="5" checked="checked">
-    	 <label for="5star">5</label>
+    	 <label class="radio" for="5star">5</label>
   <p>
 	  <input type="hidden" name="subscriptionid" value="<?= $subscriptionid ?>"></input>
     <input type="submit" name="submitbutton" value="submit"></input>
