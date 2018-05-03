@@ -12,7 +12,7 @@ $city = $row['City'];
 $state = $row['State'];
 
 if(isset($_POST['yesbutton'])){
-	$query="DELETE FROM review left join subscription on review.subscriptionid=subscription.subscriptionid WHERE magazineid=:magazineid";
+	$query="DELETE FROM review WHERE subscriptionid=(SELECT subscriptionid from review left join subscription on review.subscriptionid=subscription.subscriptionid WHERE magazineid=:magazineid)";
 	$sql=$pdo->prepare($query);
 	$sql->execute(array(":magazineid" => $_GET['magazineid']));
 	$query="DELETE FROM subscription WHERE magazineid=:magazineid";
