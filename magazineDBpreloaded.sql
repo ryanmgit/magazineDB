@@ -56,6 +56,25 @@ CREATE TABLE `review` (
   `Reviewdate` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `review`
+--
+
+INSERT INTO `review` (`Reviewid`, `Subscriptionid`, `Stars`, `Reviewdate`) VALUES
+(1, 1, 5, '2018-05-20'),
+(2, 2, 5, '2017-08-03'),
+(3, 5, 1, '2018-12-05'),
+(4, 6, 3, '2018-04-10'),
+(5, 15, 4, '2018-05-15'),
+(6, 20, 5, '2017-11-01'),
+(7, 22, 5, '2018-03-02'),
+(8, 18, 2, '2018-01-07'),
+(9, 8, 4, '2017-09-15'),
+(10, 21, 1, '2018-07-03'),
+(11, 4, 3, '2018-05-24'),
+(12, 3, 5, '2017-10-27');
+
+
 -- --------------------------------------------------------
 
 --
@@ -171,7 +190,7 @@ ALTER TABLE `magazine`
 -- AUTO_INCREMENT for table `review`
 --
 ALTER TABLE `review`
-  MODIFY `Reviewid` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `Reviewid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `subscriber`
