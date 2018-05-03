@@ -1,6 +1,6 @@
 <?php
 require_once "dbconnection.php";
-$query="select subscriptionid, magazinename, subscribersfname, subscriberslname, subscriptiondate, subscriptionperiod from subscription left join magazine on subscription.magazineid=magazine.magazineid left join subscriber on subscription.subscriberid=subscriber.subscriberid";
+$query="select subscriptionid, magazinename, subscribersfname, subscriberslname, subscriptiondate, subscriptionperiod from subscription left join magazine on subscription.magazineid=magazine.magazineid left join subscriber on subscription.subscriberid=subscriber.subscriberid where subscriptionid=:subscriptionid";
 $sql = $pdo->prepare($query);
 $sql->execute(array(":subscriptionid" => $_GET['subscriptionid']));
 $row = $sql->fetch(PDO::FETCH_ASSOC);
