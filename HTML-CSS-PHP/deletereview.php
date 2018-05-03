@@ -1,6 +1,6 @@
 <?php
 require_once "dbconnection.php";
-$query="SELECT reviewid, subscribersfname, subscribersfname, magazinename, stars, reviewdate FROM review left join subscription on review.subscriptionid=subscription.subscriptionid left join subscriber on subscription.subscriberid=subscriber.subscriberid left join magazine on subscription.magazineid=magazine.magazineid where reviewid = :reviewid";
+$query="SELECT reviewid, subscribersfname, subscriberslname, magazinename, stars, reviewdate FROM review left join subscription on review.subscriptionid=subscription.subscriptionid left join subscriber on subscription.subscriberid=subscriber.subscriberid left join magazine on subscription.magazineid=magazine.magazineid where reviewid = :reviewid";
 $sql = $pdo->prepare($query);
 $sql->execute(array(":reviewid" => $_GET['reviewid']));
 $row = $sql->fetch(PDO::FETCH_ASSOC);
@@ -43,7 +43,7 @@ if(isset($_POST['yesbutton'])){
   <input type="text" name="Reviewid" value="<?= $reviewid ?>" readonly="readonly">
 </p>
 <p>Magazine Name:
-  <input type="text" name="Magazinename" value="<?= $j ?>" readonly="readonly">
+  <input type="text" name="Magazinename" value="<?= $magazinename ?>" readonly="readonly">
 </p>
 <p>Subscriber fname:
   <input type="text" name="Subscribersfname" value="<?= $subscribersfname ?>" readonly="readonly">
