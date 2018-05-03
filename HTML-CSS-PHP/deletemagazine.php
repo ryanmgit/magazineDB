@@ -5,11 +5,11 @@ $query="SELECT * FROM magazine where magazineid = :magazineid";
 $sql = $pdo->prepare($query);
 $sql->execute(array(":magazineid" => $_GET['magazineid']));
 $row = $sql->fetch(PDO::FETCH_ASSOC);
-$bn = $row['Magazineid'];
-$c = $row['Magazinename'];
-$s = $row['Type'];
-$bid = $row['City'];
-$fid = $row['State'];
+$magazineid = $row['Magazineid'];
+$magazinename = $row['Magazinename'];
+$type = $row['Type'];
+$city = $row['City'];
+$state = $row['State'];
 
 if(isset($_POST['yesbutton'])){
 	$query="DELETE FROM subscription WHERE magazineid=:magazineid";
@@ -40,19 +40,19 @@ if(isset($_POST['yesbutton'])){
 <p>
   <form method="post">
 <p>Magazineid:
-  <input type="text" name="Magazineid" value="<?=$bn?>">
+  <input type="text" name="magazineid" value="<?=$magazineid?>">
 </p>
 <p>Magazinename:
-  <input type="text" name="Magazinename" value="<?= $c ?>">
+  <input type="text" name="magazinename" value="<?= $magazinename ?>">
 </p>
 <p>Type:
-  <input type="text" name="Type" value="<?= $s ?>">
+  <input type="text" name="type" value="<?= $type ?>">
 </p>
 <p>City:
-  <input type="text" name="City" value="<?= $bid ?>">
+  <input type="text" name="city" value="<?= $city ?>">
 </p>
 <p>State:
-  <input type="text" name="State" value="<?= $fid ?>">
+  <input type="text" name="state" value="<?= $state ?>">
 </p>
 <p>
   <input type="submit" name="yesbutton" value="YES">
