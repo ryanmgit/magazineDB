@@ -1,6 +1,6 @@
 <?php
 require_once "dbconnection.php";
-$query="SELECT reviewid, subscribersfname, subscribersfname, magazinename, stars, reviewdate FROM review where reviewid = :reviewid";
+$query="SELECT reviewid, subscribersfname, subscribersfname, magazinename, stars, reviewdate FROM review left join subscription on review.subscriptionid=subscription.subscriptionid left join subscriber on subscription.subscriberid=subscriber.subscriberid left join magazine on subscription.magazineid=magazine.magazineid where reviewid = :reviewid";
 $sql = $pdo->prepare($query);
 $sql->execute(array(":reviewid" => $_GET['reviewid']));
 $row = $sql->fetch(PDO::FETCH_ASSOC);
