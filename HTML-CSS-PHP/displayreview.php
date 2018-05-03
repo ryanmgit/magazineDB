@@ -34,7 +34,7 @@ echo "<tr><th>Review id</th><th>Subscriber fname</th><th>Subscriber lname<th>Mag
     echo ($row['stars']);
     echo "</td><td>";
     echo ($row['reviewdate']);
-    echo "</td><td>";
+    echo "</td><td align-contents='center'>";
 //clicking on differnt links leads to corresponding editing pages
     echo ('<a href="deletereview.php?subscriptionid='.$row['reviewid'].'">Delete</a>');
     echo "</td></tr>";
@@ -45,7 +45,7 @@ echo "</table>";
   <p>
 	</p>
   <div class="button">
-		<input type="button" class="cancelbutton" value="Cancel" onclick="location.href='index.html';" align-contents='center'>
+		<input type="button" class="cancelbutton" value="Cancel" onclick="location.href='index.html';">
 	</div>
 
 </div>
