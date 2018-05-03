@@ -7,24 +7,24 @@ $sql=$pdo->prepare($query);
 $sql->execute(array(":subscriptionid" => $_GET['subscriptionid']));
 
 $row = $sql->fetch(PDO::FETCH_ASSOC);
-$magazineid = $row['Magazineid'];
-$subscriberid = $row['Subscriberid'];
-$subscriptionid = $row['Subscriptionid'];
+$magazineid = $row['magazineid'];
+$subscriberid = $row['subscriberid'];
+$subscriptionid = $row['subscriptionid'];
 
 $query="SELECT magazinename FROM magazine where magazineid = :magazineid";
 $sql = $pdo->prepare($query);
 $sql->execute(array(":magazineid" => $magazineid));
 
 $row = $sql->fetch(PDO::FETCH_ASSOC);
-$magazinename = $row['Magazinename'];
+$magazinename = $row['magazinename'];
 
 $query="SELECT subscribersfname, subscriberslname FROM subscriber where subscriberid = :subscriberid";
 $sql = $pdo->prepare($query);
 $sql->execute(array(":subscriberid" => $subscriberid));
 
 $row = $sql->fetch(PDO::FETCH_ASSOC);
-$subscriberfname = $row['Subscribersfname'];
-$subscriberlname = $row['Subscriberslname'];
+$subscriberfname = $row['subscribersfname'];
+$subscriberlname = $row['subscriberslname'];
 
 if(isset($_POST['submitbutton'])){
   $query="INSERT INTO review (subscriptionid, stars, reviewdate) values (:subscriptionid, :stars, :reviewdate)";
