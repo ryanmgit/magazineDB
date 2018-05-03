@@ -43,7 +43,7 @@ if(isset($_POST['yesbutton'])){
 <p>
   <form method="post">
 <p>Magazineid:
-  <input type="text" name="magazineid" value="<?=$magazineid?>">
+  <input type="text" name="magazineid" value="<?= $magazineid ?>">
 </p>
 <p>Magazinename:
   <input type="text" name="magazinename" value="<?= $magazinename ?>">
