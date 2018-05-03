@@ -32,7 +32,7 @@ echo "<tr><th>Review id</th><th>Subscriber fname</th><th>Subscriber lname<th>Mag
     echo ($row['magazinename']);
     echo "</td><td>";
     echo ($row['subscriptionperiod']);
-    echo "</td><td>";
+    echo "</td><td alighn='center'>";
     echo ($row['stars']);
     echo "</td><td>";
     echo ($row['reviewdate']);
