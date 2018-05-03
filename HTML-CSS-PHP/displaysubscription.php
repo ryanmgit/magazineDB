@@ -16,7 +16,7 @@
 
 require_once "dbconnection.php";
 //execute the follpwing quary
-$query="select magazinename, subscribersfname, subscriberslname, subscriptiondate, subscriptionperiod from subscription left join magazine on subscription.magazineid=magazine.magazineid left join subscriber on subscription.subscriberid=subscriber.subscriberid";
+$query="select subscriptionid, magazinename, subscribersfname, subscriberslname, subscriptiondate, subscriptionperiod from subscription left join magazine on subscription.magazineid=magazine.magazineid left join subscriber on subscription.subscriberid=subscriber.subscriberid";
 $sql=$pdo->prepare($query);
 $sql->execute();
 
