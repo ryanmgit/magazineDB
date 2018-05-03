@@ -18,11 +18,11 @@ require_once "dbconnection.php";
 $query="select reviewid, subscribersfname, subscriberslname, magazinename, subscriptionperiod, stars, reviewdate from review left join subscription on review.subscriptionid=subscription.subscriptionid left join subscriber on subscription.subscriberid=subscriber.subscriberid left join magazine on subscription.magazineid=magazine.magazineid";
 $sql=$pdo->prepare($query);
 $sql->execute();
-echo "<table border='1' text-align='center'>";
+echo "<table border='1'>";
 echo "<tr><th>Review id</th><th>Subscriber fname</th><th>Subscriber lname<th>Magazine Name</th><th>Subscription Period<th>Stars</th><th>Review Date<th>Action</th></tr>";
 //$row = $sql->fetch(PDO::FETCH_ASSOC states that store the next row in the quesry result into $row
   while($row = $sql->fetch(PDO::FETCH_ASSOC)){//print out the query result row by row
-    echo "<tr><td>";
+    echo "<tr><td align='center'>>";
     echo ($row['reviewid']);
     echo "</td><td>";
     echo ($row['subscribersfname']);
