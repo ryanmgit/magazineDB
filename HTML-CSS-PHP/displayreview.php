@@ -15,7 +15,7 @@
 <?php
 require_once "dbconnection.php";
 //execute the follpwing quary
-$query="select reviewid, subscriberfname, subscriberlname, magazinename, stars, reviewdate from review left join subscription on review.subscriptionid=subscription.subsriptionid left join subscriber on subscription.subscriberid=subscriber.subscriberid left join magazine on subscription.magazineid=magazine.magazineid";
+$query="select reviewid, subscribersfname, subscriberslname, magazinename, stars, reviewdate from review left join subscription on review.subscriptionid=subscription.subsriptionid left join subscriber on subscription.subscriberid=subscriber.subscriberid left join magazine on subscription.magazineid=magazine.magazineid";
 $sql=$pdo->prepare($query);
 $sql->execute();
 echo "<table border='1'>";
@@ -25,9 +25,9 @@ echo "<tr><th>Review id</th><th>Subscriber fname</th><th>Subscriber lname<th>Mag
     echo "<tr><td>";
     echo ($row['reviewid']);
     echo "</td><td>";
-    echo ($row['subscriberfname']);
+    echo ($row['subscribersfname']);
     echo "</td><td>";
-    echo ($row['subscriberlname']);
+    echo ($row['subscriberslname']);
     echo "</td><td>";
     echo ($row['magazinename']);
     echo "</td><td>";
