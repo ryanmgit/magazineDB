@@ -38,7 +38,7 @@ echo "<tr><th>Review id</th><th>Subscriber fname</th><th>Subscriber lname<th>Mag
     echo ($row['reviewdate']);
     echo "</td><td align='center'>";
 //clicking on differnt links leads to corresponding editing pages
-    echo ('<a href="deletereview.php?subscriptionid='.$row['reviewid'].'">Delete</a>');
+    echo ('<a href="deletereview.php?reviewid='.$row['reviewid'].'">Delete</a>');
     echo "</td></tr>";
   }
 echo "</table>";
