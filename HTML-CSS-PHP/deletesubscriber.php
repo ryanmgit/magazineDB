@@ -4,7 +4,7 @@ $query="SELECT * FROM subscriber where subscriberid = :subscriberid";
 $sql = $pdo->prepare($query);
 $sql->execute(array(":subscriberid" => $_GET['subscriberid']));
 $row = $sql->fetch(PDO::FETCH_ASSOC);
-$subsctiberid = $row['Subscriberid'];
+$subscriberid = $row['Subscriberid'];
 $subscribersfname = $row['Subscribersfname'];
 $subscriberslname = $row['Subscriberslname'];
 $email = $row['Email'];
@@ -39,7 +39,7 @@ if(isset($_POST['yesbutton'])){
 <p>
   <form method="post">
 <p>Subscriberid:
-  <input type="text" name="subscriberid" value="<?= $subscriberid ?>" >
+  <input type="text" name="Subscriberid" value="<?= $subscriberid ?>" >
 </p>
 <p>Subscribersfname:
   <input type="text" name="Subscribersfname" value="<?= $subscribersfname ?>">
