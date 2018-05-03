@@ -37,7 +37,7 @@ if(isset($_POST['yesbutton'])){
 <p>
   <form method="post">
 <p>Subscriptionid:
-  <input type="text" name="subscriptionid" value="<?= $subscriptionid ?>">
+  <input type="text" name="subscriptionid" value="<?= $fn ?>">
 </p>
 <p>Magazine Name:
   <input type="text" name="magazinename" value="<?= $magazinename ?>">
