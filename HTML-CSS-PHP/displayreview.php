@@ -22,7 +22,7 @@ echo "<table border='1'>";
 echo "<tr><th>Review id</th><th>Subscriber fname</th><th>Subscriber lname<th>Magazine Name</th><th>Subscription Period<th>Stars</th><th>Review Date<th>Action</th></tr>";
 //$row = $sql->fetch(PDO::FETCH_ASSOC states that store the next row in the quesry result into $row
   while($row = $sql->fetch(PDO::FETCH_ASSOC)){//print out the query result row by row
-    echo "<tr><td align='center'>>";
+    echo "<tr><td align='center'>";
     echo ($row['reviewid']);
     echo "</td><td>";
     echo ($row['subscribersfname']);
