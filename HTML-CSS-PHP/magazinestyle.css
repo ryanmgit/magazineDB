@@ -80,6 +80,9 @@ table, th, td.php{
     font-size: 1vw;
     border: 1px solid black;
 }
+td{
+    word-wrap:break-word
+}
 input.cancel{
 	width: 20%;
 	height: 15%;
