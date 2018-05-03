@@ -151,4 +151,7 @@ select{
 input[type=radio]{
 	float: right;
 }
+label.radio{
+	float: right;
+}
 	
