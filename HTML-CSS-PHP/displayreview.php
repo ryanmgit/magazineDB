@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Reviews</title>
+<link rel="stylesheet" type="text/css" href="magazinestyle.css">
+</head>
+<body>
+<div class="background">
+<div class="fullform">
+	<div class="welcometext">
+		Reviews
+
+	</div>
+  <div class="php">
+<?php
+require_once "dbconnection.php";
+//execute the follpwing quary
+$query="select reviewid, subscriberfname, subscriberlname, magazinename, stars, reviewdate from review left join subscription on review.subscriptionid=subscription.subsriptionid left join subscriber on subscription.subscriberid=subscriber.subscriberid left join magazine on subscription.magazineid=magazine.magazineid";
+$sql=$pdo->prepare($query);
+$sql->execute();
+echo "<table border='1'>";
+echo "<tr><th>Review id</th><th>Subscriber fname</th><th>Subscriber lname<th>Magazine Name</th><th>Stars</th><th>Review Date<th>Action</th></tr>";
+//$row = $sql->fetch(PDO::FETCH_ASSOC states that store the next row in the quesry result into $row
+  while($row = $sql->fetch(PDO::FETCH_ASSOC)){//print out the query result row by row
+    echo "<tr><td>";
+    echo ($row['reviewid']);
+    echo "</td><td>";
+    echo ($row['subscriberfname']);
+    echo "</td><td>";
+    echo ($row['subscriberlname']);
+    echo "</td><td>";
+    echo ($row['magazinename']);
+    echo "</td><td>";
+    echo ($row['stars']);
+    echo "</td><td>";
+    echo ($row['reviewdate']);
+    echo "</td><td>";
+//clicking on differnt links leads to corresponding editing pages
+    echo ('<a href="deletereview.php?subscriptionid='.$row['reviewid'].'">Delete</a>');
+    echo "</td></tr>";
+  }
+echo "</table>";
+?>
+  </div>
+  <p>
+	</p>
+  <div class="button">
+		<input type="button" class="cancelbutton" value="Cancel" onclick="location.href='index.html';">
+	</div>
+
+</div>
+</div>
+</body>
+</html>
