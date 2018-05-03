@@ -12,6 +12,9 @@ $subscriptiondate = $row['subscriptiondate'];
 $subscriptionperiod = $row['subscriptionperiod'];
 
 if(isset($_POST['yesbutton'])){
+  $query="DELETE FROM review WHERE subscriptionid=:subscriptionid";
+  $sql=$pdo->prepare($query);
+  $sql->execute(array(":subscriptionid" => $_GET['subscriptionid']));
   $query="DELETE FROM subscription WHERE subscriptionid=:subscriptionid";
   $sql=$pdo->prepare($query);
   $sql->execute(array(":subscriptionid" => $_GET['subscriptionid']));
