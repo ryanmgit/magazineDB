@@ -1,6 +1,7 @@
 -- phpMyAdmin SQL empty startup file THIS WILL DELETE EVERYTHING IN magazinedb
 
 
+
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
@@ -11,11 +12,11 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `magazineDB`
+-- Database: `magazineDBpreloaded`
 --
-DROP DATABASE IF EXISTS magazineDB;
-CREATE DATABASE magazineDB DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
-USE `magazineDB`;
+DROP DATABASE IF EXISTS magazineDBpreloaded;
+CREATE DATABASE magazineDBpreloaded DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `magazineDBpreloaded`;
 
 -- --------------------------------------------------------
 
@@ -31,6 +32,7 @@ CREATE TABLE `magazine` (
   `State` char(2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+
 -- --------------------------------------------------------
 
 --
@@ -39,8 +41,7 @@ CREATE TABLE `magazine` (
 
 CREATE TABLE `review` (
   `Reviewid` int(11) NOT NULL,
-  `Magazineid` int(11) DEFAULT NULL,
-  `Subscriberid` int(11) DEFAULT NULL,
+  `Subscriptionid` int(11) DEFAULT NULL,
   `Stars` int(11) NOT NULL,
   `Reviewdate` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -89,8 +90,8 @@ ALTER TABLE `magazine`
 --
 ALTER TABLE `review`
   ADD PRIMARY KEY (`Reviewid`),
-  ADD KEY `fk3` (`Magazineid`),
-  ADD KEY `fk4` (`Subscriberid`);
+  ADD KEY `fk3` (`Subscriptionid`);
+  
 
 --
 -- Indexes for table `subscriber`
@@ -118,7 +119,7 @@ ALTER TABLE `magazine`
 -- AUTO_INCREMENT for table `review`
 --
 ALTER TABLE `review`
-  MODIFY `Reviewid` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `Reviewid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
 
 --
 -- AUTO_INCREMENT for table `subscriber`
@@ -140,8 +141,7 @@ ALTER TABLE `subscription`
 -- Constraints for table `review`
 --
 ALTER TABLE `review`
-  ADD CONSTRAINT `fk3` FOREIGN KEY (`Magazineid`) REFERENCES `magazine` (`Magazineid`),
-  ADD CONSTRAINT `fk4` FOREIGN KEY (`Subscriberid`) REFERENCES `subscriber` (`Subscriberid`);
+  ADD CONSTRAINT `fk3` FOREIGN KEY (`Subscriptionid`) REFERENCES `subscription` (`Subscriptionid`);
 
 --
 -- Constraints for table `subscription`
