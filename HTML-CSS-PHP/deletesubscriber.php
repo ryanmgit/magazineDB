@@ -4,12 +4,12 @@ $query="SELECT * FROM subscriber where subscriberid = :subscriberid";
 $sql = $pdo->prepare($query);
 $sql->execute(array(":subscriberid" => $_GET['subscriberid']));
 $row = $sql->fetch(PDO::FETCH_ASSOC);
-$an = $row['Subscriberid'];
-$e = $row['Subscribersfname'];
-$g = $row['Subscriberslname'];
-$gid = $row['Email'];
-$did = $row['City'];
-$mid = $row['State'];
+$subsctiberid = $row['Subscriberid'];
+$subscribersfname = $row['Subscribersfname'];
+$subscriberslname = $row['Subscriberslname'];
+$email = $row['Email'];
+$city = $row['City'];
+$state = $row['State'];
 if(isset($_POST['yesbutton'])){
 	$query="DELETE FROM subscription WHERE subscriberid=:subscriberid";
 	$sql=$pdo->prepare($query);
@@ -39,22 +39,22 @@ if(isset($_POST['yesbutton'])){
 <p>
   <form method="post">
 <p>Subscriberid:
-  <input type="text" name="subscriberid" value="<?= $an ?>" >
+  <input type="text" name="subscriberid" value="<?= $subscriberid ?>" >
 </p>
 <p>Subscribersfname:
-  <input type="text" name="Subscribersfname" value="<?= $e ?>">
+  <input type="text" name="Subscribersfname" value="<?= $subscribersfname ?>">
 </p>
 <p>Subscriberslname:
-  <input type="text" name="Subscriberslname" value="<?= $g ?>">
+  <input type="text" name="Subscriberslname" value="<?= $subscriberslname ?>">
 </p>
 <p>Email:
-  <input type="text" name="Email" value="<?= $gid ?>">
+  <input type="text" name="Email" value="<?= $email ?>">
 </p>
 <p>City:
-  <input type="text" name="City" value="<?= $did ?>">
+  <input type="text" name="City" value="<?= $city ?>">
 </p>
 <p>State:
-  <input type="text" name="State" value="<?= $mid ?>">
+  <input type="text" name="State" value="<?= $state ?>">
 </p>
 <p>
   <input type="submit" name="yesbutton" value="YES">
