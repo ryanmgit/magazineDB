@@ -1,22 +1,20 @@
 <?php
 require_once "dbconnection.php";
-$query="SELECT * FROM subscription where subscriptionid = :subscriptionid";
+$query="select subscriptionid, magazinename, subscribersfname, subscriberslname, subscriptiondate, subscriptionperiod from subscription left join magazine on subscription.magazineid=magazine.magazineid left join subscriber on subscription.subscriberid=subscriber.subscriberid";
 $sql = $pdo->prepare($query);
 $sql->execute(array(":subscriptionid" => $_GET['subscriptionid']));
 $row = $sql->fetch(PDO::FETCH_ASSOC);
-$fn = $row['Subscriptionid'];
-$j = $row['Magazineid'];
-$k = $row['Subscriberid'];
-$kid = $row['Subscriptiondate'];
-$lid = $row['Subscriptionperiod'];
+$subscriptionid = $row['subscriptionid'];
+$magazinename = $row['magazinename'];
+$subscribersfname = $row['subscribersfname'];
+$subscriberslname = $row['subscriberslname'];
+$subscriptiondate = $row['subscriptiondate'];
+$subscriptionperiod = $row['subscriptionperiod'];
 
 if(isset($_POST['yesbutton'])){
   $query="DELETE FROM subscription WHERE subscriptionid=:subscriptionid";
   $sql=$pdo->prepare($query);
-  $sql->execute(
-  array(
-        ":subscriptionid" => $_GET['Subscriptionid'])
-                );
+  $sql->execute(array(":subscriptionid" => $_GET['subscriptionid']));
   header('Location: displaysubscription.php');
 };
 ?>
@@ -39,19 +37,22 @@ if(isset($_POST['yesbutton'])){
 <p>
   <form method="post">
 <p>Subscriptionid:
-  <input type="text" name="Subscriptionid" value="<?= $fn ?>">
+  <input type="text" name="subscriptionid" value="<?= $fn ?>">
 </p>
-<p>Magazineid:
-  <input type="text" name="Magazineid" value="<?= $j ?>">
+<p>Magazine Name:
+  <input type="text" name="magazinename" value="<?= $magazinename ?>">
 </p>
-<p>Subscriberid:
-  <input type="text" name="Subscriberid" value="<?= $k ?>">
+<p>Subscriber fname:
+  <input type="text" name="subscribersfname" value="<?= $subscribersfname ?>">
 </p>
-<p>Subscriptiondate:
-  <input type="text" name="Subscriptiondate" value="<?= $kid ?>">
+<p>Subscription lname:
+  <input type="text" name="subscriberslname" value="<?= $subscriberslname ?>">
 </p>
-<p>Subscriptionperiod:
-  <input type="text" name="Subscriptionperiod" value="<?= $lid ?>">
+<p>Subscription Date:
+  <input type="text" name="subscriptiondate" value="<?= $subscriptiondate ?>">
+</p>
+<p>Subscription Period:
+  <input type="text" name="subscriptionperiod" value="<?= $subscriptionperiod ?>">
 </p>
 <p>
   <input type="submit" name="yesbutton" value="YES">
